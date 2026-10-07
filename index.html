@@ -84,11 +84,6 @@ body{background:#f5f7fa}.hero{background:#fff;border:1px solid #d4e0e9;border-to
 .view-nav{display:flex;gap:7px;align-items:center;overflow:auto}
 .view-nav a{text-decoration:none;color:#526b7e;padding:8px 12px;border-radius:9px;font-size:14px;font-weight:700;white-space:nowrap;border:1px solid transparent}
 .view-nav a:hover{background:#eef5fa;color:#005f9f}.view-nav a.active{background:#e7f2fb;color:#005f9f;border-color:#c7ddeb}
-body.view-ready .content-group{display:none}
-body[data-view="intro"] #overview{display:block}
-body[data-view="products"] #products{display:block}
-body[data-view="prompts"] #guide,body[data-view="prompts"] #prompts{display:block}
-body[data-view="advanced"] #dashboard,body[data-view="advanced"] #cskh{display:block}
 .view-landing{margin:0 0 26px;padding:24px 26px;border:1px solid #d1e0eb;border-radius:16px;background:#fff}
 .view-landing h2{font-size:28px;color:#174f70}.view-landing p{margin-top:7px;color:#526b7e}
 .connector-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.connector-card{background:#fff;border:1px solid #d4e2ec;border-radius:13px;padding:21px}.connector-card h3{font-size:20px;color:#175b7e;margin:10px 0 7px}.connector-card p{font-size:15px;color:#526b7e}.connector-badge{display:inline-block;font-size:12px;font-weight:750;color:#0068ac;background:#e8f3fb;padding:5px 8px;border-radius:6px}.connection-note{margin-top:14px;padding:15px 18px;background:#edf5fa;border-left:3px solid #0072bc;border-radius:0 9px 9px 0;color:#42677f;font-size:15px}
@@ -126,13 +121,10 @@ body[data-view="advanced"] #dashboard,body[data-view="advanced"] #cskh{display:b
 #guide .compact-guide .section{background:#fff;border:1px solid #d8e4ec;border-radius:15px;padding:20px;margin-top:0}
 #guide .compact-guide .section+.section{margin-top:0}
 #prompts{border-top-left-radius:14px;border-top-right-radius:14px;margin-top:10px}
-body[data-view="prompts"] #guide{border-bottom-left-radius:14px;border-bottom-right-radius:14px}
-body[data-view="prompts"] #guide+#prompts{margin-top:12px}
 #prompts .library-index{margin-top:4px}
 #prompts .library-group{margin-top:16px}
 #dashboard{border-bottom-left-radius:14px;border-bottom-right-radius:14px}
 #cskh{margin-top:12px}
-body[data-view="advanced"] #dashboard+#cskh{margin-top:12px}
 #dashboard .advanced-section,#cskh .cskh-section{padding:24px}
 #dashboard .reference-dashboard,#cskh .cols,#cskh .compact-checks{margin-top:16px}
 
@@ -192,11 +184,6 @@ body[data-view="advanced"] #dashboard+#cskh{margin-top:12px}
 /* Deterministic top-tab state: exactly one tab follows the visible view */
 .view-nav a,.view-nav a.active,.view-nav a[aria-current="page"]{background:transparent!important;box-shadow:none!important;border-color:transparent!important;color:#5b7182!important}
 .view-nav a:hover{background:#eef5fa!important;color:#175b7e!important}
-body[data-view="intro"] .view-nav a[data-view-link="intro"],
-body[data-view="products"] .view-nav a[data-view-link="products"],
-body[data-view="prompts"] .view-nav a[data-view-link="prompts"],
-body[data-view="advanced"] .view-nav a[data-view-link="advanced"]{background:#e3f1fb!important;color:#005f9f!important;border-color:#c9dfef!important;box-shadow:inset 0 -2px #0072bc!important}
-
 /* Data2Sheet setup paths */
 .tool-setup-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px}
 .tool-setup-card{background:#fff;border:1px solid #d4e2ec;border-radius:14px;padding:19px}
@@ -213,9 +200,18 @@ body[data-view="advanced"] .view-nav a[data-view-link="advanced"]{background:#e3
 .progress{left:0!important;right:0!important;width:100%!important;height:3px!important;transform:scaleX(0);transform-origin:left center;transition:transform .05s linear;will-change:transform;background:linear-gradient(90deg,#f37021 0 34%,#0072bc 34% 67%,#00a859 67%)!important}
 body.view-ready .content-group{contain:none}
 @media(prefers-reduced-motion:reduce){.progress{transition:none}}
+
+/* True one-page continuous navigation */
+.content-group{display:block!important}
+#overview,#products,#guide,#prompts,#dashboard,#cskh{scroll-margin-top:96px}
+.view-nav a.active,.view-nav a[aria-current="page"]{background:#e3f1fb!important;color:#005f9f!important;border-color:#c9dfef!important;box-shadow:inset 0 -2px #0072bc!important}
+.view-nav a:not(.active):not([aria-current="page"]){background:transparent!important;box-shadow:none!important;border-color:transparent!important;color:#5b7182!important}
+#products,#guide,#dashboard{margin-top:28px}
+#prompts,#cskh{margin-top:14px}
+.progress{transition:transform .06s linear}
 </style></head><body>
-<header class="top"><div class="top-in"><a class="brand" href="?view=intro#overview">DATA<span>2</span>SHEET</a><nav class="view-nav" aria-label="Khu vực nội dung"><a data-view-link="intro" href="?view=intro#overview">01 · Đề tài &amp; giải pháp</a><a data-view-link="products" href="?view=products#products">02 · Sản phẩm thực tế</a><a data-view-link="prompts" href="?view=prompts#guide">03 · Thực hành &amp; Prompt</a><a data-view-link="advanced" href="?view=advanced#dashboard">04 · Ứng dụng mở rộng</a></nav></div><div class="progress" aria-hidden="true"></div></header><main class="page"><div class="content-group" id="overview"><div class="group-cap"><div><span>01</span><strong>Giới thiệu đề tài</strong></div><p>Vấn đề → giải pháp → cách làm → giá trị ứng dụng</p></div><section class="hero" id="start"><div class="hero-main"><span class="label">ĐỀ TÀI DỰ THI · GIẢI PHÁP ỨNG DỤNG AI TẠI SG10</span><h1>Data<span>2</span>Sheet SG10</h1><p class="lead">Ứng dụng AI trong xây dựng<br><span class="hero-emphasis">và vận hành báo cáo nghiệp vụ.</span></p><p class="sub">Data2Sheet SG10 đề xuất cách chuyển dữ liệu thô thành báo cáo bằng hội thoại với AI, áp dụng cho Kinh doanh – Dịch vụ khách hàng – Kỹ thuật. Người dùng xác định dữ liệu, KPI và nghiệp vụ; AI hỗ trợ cấu trúc, công thức và trình bày; con người kiểm tra và quyết định sử dụng kết quả.</p><div class="hero-actions"><a class="button primary" href="#problem">Khám phá giải pháp <span aria-hidden="true">→</span></a><a class="button" href="?view=products#samples">Xem sản phẩm thực tế</a></div></div><aside class="hero-aside"><span class="label">MÔ HÌNH GIẢI PHÁP</span><ol class="path"><li><em>01</em>Có dữ liệu</li><li><em>02</em>Nói điều cần xem</li><li><em>03</em>AI hỗ trợ xây báo cáo</li><li><em>04</em>Con người kiểm tra</li><li><em>05</em>Tinh chỉnh &amp; dùng lại</li></ol><p>Người làm nghiệp vụ giữ vai trò xác định KPI, chốt rule và quyết định sử dụng kết quả.</p></aside></section>
-<section class="section" id="problem"><div class="section-title"><span class="section-num">01</span><div><h2>Vấn đề thực tế &amp; giải pháp đề xuất</h2><p>Từ nhu cầu theo dõi sản lượng, chất lượng và tiến độ tại SG10 đến công cụ báo cáo có thể kiểm tra, cập nhật và bàn giao.</p></div></div><div class="cols"><article class="card"><h3>Thực trạng &amp; nhu cầu</h3><ul><li>Phải lọc dữ liệu, ghép nhân sự, tính KPI và trình bày lại báo cáo.</li><li>Mỗi lần đổi tháng, thêm chỉ số hoặc chỉnh bộ lọc đều phải rà công thức.</li><li>Số liệu có thể lệch do trùng HĐ, sai ngày ghi nhận, nhầm đơn vị hoặc thiếu map.</li><li>Người hiểu nghiệp vụ còn phụ thuộc người thành thạo Excel/Google Sheets.</li></ul></article><article class="card highlight"><h3>Giải pháp Data2Sheet SG10</h3><ul><li>Dùng ChatGPT chuyển yêu cầu bằng ngôn ngữ tự nhiên thành cấu trúc, map và công thức.</li><li>Khai thác nguồn trên Google Sheet qua kết nối được cấp quyền; khi chưa có công cụ ghi, AI cung cấp công thức hoặc mã để người dùng triển khai.</li><li>Đối chiếu báo cáo với nguồn; truy đúng HĐ/case khi có lệch số.</li><li>Hoàn thiện qua hội thoại và dùng lại khi cập nhật dữ liệu.</li></ul></article></div><div class="callout">Người dùng nói <b>“Tôi muốn xem gì”</b>. AI hỗ trợ thực hiện phần kỹ thuật; <b>người dùng xác nhận nghiệp vụ và kiểm tra kết quả</b>.</div><div class="extension-overview"><div><span class="appendix-label">MỞ RỘNG CÙNG CÁCH LÀM</span><h3>Hai ứng dụng nâng cao</h3><p>Mô hình có thể mở rộng từ báo cáo trên Sheet sang dashboard tương tác và trợ lý phân tích SR cho DVKH. Hai ứng dụng bổ trợ thể hiện hướng phát triển của đề tài.</p></div><a class="button" href="?view=advanced#dashboard">Dashboard Apps Script →</a><a class="button" href="?view=advanced#cskh">AI CSKH Assistant →</a></div><div class="competition-core"><section class="section" id="roles"><div class="section-title"><span class="section-num">•</span><div><h2>AI làm phần kỹ thuật. Con người giữ nghiệp vụ.</h2><p>Giải pháp giữ hệ thống nguồn làm căn cứ và giữ quyền quyết định KPI ở người phụ trách. AI hoàn tất thao tác không đồng nghĩa số liệu đã được duyệt.</p></div></div><div class="roles"><article class="card"><span class="label">CON NGƯỜI</span><h3>Nói đúng điều cần xem</h3><p>Xác định nguồn chuẩn, KPI, cấp quản trị và mục tiêu sử dụng. Chốt kỳ tính, quy tắc hủy/trùng, phân công và ngoại lệ trước khi tính toán.</p></article><article class="card"><span class="label">AI HỖ TRỢ</span><h3>Chuyển nghiệp vụ thành báo cáo</h3><p>Rà dữ liệu, đề xuất MAP/MASTER, viết công thức, dựng báo cáo và bộ lọc; truy chênh lệch và tinh chỉnh theo phản hồi của người dùng.</p></article><article class="card"><span class="label">KIỂM SOÁT</span><h3>QA trước khi sử dụng</h3><p>Đối soát từ từng bản ghi nguồn đến nhóm và tổng báo cáo; kiểm kỳ, bộ lọc và ngoại lệ. Người phụ trách xác nhận số liệu trước khi dùng để điều hành.</p></article></div></section>
+<header class="top"><div class="top-in"><a class="brand" href="#overview">DATA<span>2</span>SHEET</a><nav class="view-nav" aria-label="Khu vực nội dung"><a data-view-link="intro" href="#overview">01 · Đề tài &amp; giải pháp</a><a data-view-link="products" href="#products">02 · Sản phẩm thực tế</a><a data-view-link="prompts" href="#guide">03 · Thực hành &amp; Prompt</a><a data-view-link="advanced" href="#dashboard">04 · Ứng dụng mở rộng</a></nav></div><div class="progress" aria-hidden="true"></div></header><main class="page"><div class="content-group" id="overview"><div class="group-cap"><div><span>01</span><strong>Giới thiệu đề tài</strong></div><p>Vấn đề → giải pháp → cách làm → giá trị ứng dụng</p></div><section class="hero" id="start"><div class="hero-main"><span class="label">ĐỀ TÀI DỰ THI · GIẢI PHÁP ỨNG DỤNG AI TẠI SG10</span><h1>Data<span>2</span>Sheet SG10</h1><p class="lead">Ứng dụng AI trong xây dựng<br><span class="hero-emphasis">và vận hành báo cáo nghiệp vụ.</span></p><p class="sub">Data2Sheet SG10 đề xuất cách chuyển dữ liệu thô thành báo cáo bằng hội thoại với AI, áp dụng cho Kinh doanh – Dịch vụ khách hàng – Kỹ thuật. Người dùng xác định dữ liệu, KPI và nghiệp vụ; AI hỗ trợ cấu trúc, công thức và trình bày; con người kiểm tra và quyết định sử dụng kết quả.</p><div class="hero-actions"><a class="button primary" href="#problem">Khám phá giải pháp <span aria-hidden="true">→</span></a><a class="button" href="#samples">Xem sản phẩm thực tế</a></div></div><aside class="hero-aside"><span class="label">MÔ HÌNH GIẢI PHÁP</span><ol class="path"><li><em>01</em>Có dữ liệu</li><li><em>02</em>Nói điều cần xem</li><li><em>03</em>AI hỗ trợ xây báo cáo</li><li><em>04</em>Con người kiểm tra</li><li><em>05</em>Tinh chỉnh &amp; dùng lại</li></ol><p>Người làm nghiệp vụ giữ vai trò xác định KPI, chốt rule và quyết định sử dụng kết quả.</p></aside></section>
+<section class="section" id="problem"><div class="section-title"><span class="section-num">01</span><div><h2>Vấn đề thực tế &amp; giải pháp đề xuất</h2><p>Từ nhu cầu theo dõi sản lượng, chất lượng và tiến độ tại SG10 đến công cụ báo cáo có thể kiểm tra, cập nhật và bàn giao.</p></div></div><div class="cols"><article class="card"><h3>Thực trạng &amp; nhu cầu</h3><ul><li>Phải lọc dữ liệu, ghép nhân sự, tính KPI và trình bày lại báo cáo.</li><li>Mỗi lần đổi tháng, thêm chỉ số hoặc chỉnh bộ lọc đều phải rà công thức.</li><li>Số liệu có thể lệch do trùng HĐ, sai ngày ghi nhận, nhầm đơn vị hoặc thiếu map.</li><li>Người hiểu nghiệp vụ còn phụ thuộc người thành thạo Excel/Google Sheets.</li></ul></article><article class="card highlight"><h3>Giải pháp Data2Sheet SG10</h3><ul><li>Dùng ChatGPT chuyển yêu cầu bằng ngôn ngữ tự nhiên thành cấu trúc, map và công thức.</li><li>Khai thác nguồn trên Google Sheet qua kết nối được cấp quyền; khi chưa có công cụ ghi, AI cung cấp công thức hoặc mã để người dùng triển khai.</li><li>Đối chiếu báo cáo với nguồn; truy đúng HĐ/case khi có lệch số.</li><li>Hoàn thiện qua hội thoại và dùng lại khi cập nhật dữ liệu.</li></ul></article></div><div class="callout">Người dùng nói <b>“Tôi muốn xem gì”</b>. AI hỗ trợ thực hiện phần kỹ thuật; <b>người dùng xác nhận nghiệp vụ và kiểm tra kết quả</b>.</div><div class="extension-overview"><div><span class="appendix-label">MỞ RỘNG CÙNG CÁCH LÀM</span><h3>Hai ứng dụng nâng cao</h3><p>Mô hình có thể mở rộng từ báo cáo trên Sheet sang dashboard tương tác và trợ lý phân tích SR cho DVKH. Hai ứng dụng bổ trợ thể hiện hướng phát triển của đề tài.</p></div><a class="button" href="#dashboard">Dashboard Apps Script →</a><a class="button" href="#cskh">AI CSKH Assistant →</a></div><div class="competition-core"><section class="section" id="roles"><div class="section-title"><span class="section-num">•</span><div><h2>AI làm phần kỹ thuật. Con người giữ nghiệp vụ.</h2><p>Giải pháp giữ hệ thống nguồn làm căn cứ và giữ quyền quyết định KPI ở người phụ trách. AI hoàn tất thao tác không đồng nghĩa số liệu đã được duyệt.</p></div></div><div class="roles"><article class="card"><span class="label">CON NGƯỜI</span><h3>Nói đúng điều cần xem</h3><p>Xác định nguồn chuẩn, KPI, cấp quản trị và mục tiêu sử dụng. Chốt kỳ tính, quy tắc hủy/trùng, phân công và ngoại lệ trước khi tính toán.</p></article><article class="card"><span class="label">AI HỖ TRỢ</span><h3>Chuyển nghiệp vụ thành báo cáo</h3><p>Rà dữ liệu, đề xuất MAP/MASTER, viết công thức, dựng báo cáo và bộ lọc; truy chênh lệch và tinh chỉnh theo phản hồi của người dùng.</p></article><article class="card"><span class="label">KIỂM SOÁT</span><h3>QA trước khi sử dụng</h3><p>Đối soát từ từng bản ghi nguồn đến nhóm và tổng báo cáo; kiểm kỳ, bộ lọc và ngoại lệ. Người phụ trách xác nhận số liệu trước khi dùng để điều hành.</p></article></div></section>
 <section class="section" id="reuse"><div class="section-title"><span class="section-num">•</span><div><h2>Giá trị ứng dụng &amp; khả năng nhân rộng</h2><p>Một cách làm báo cáo có thể tái sử dụng cho nhiều nghiệp vụ, thay vì giới hạn trong một file kết quả.</p></div></div><div class="replicate-grid"><article><h3>Giá trị trong công việc</h3><p>Giảm sự phụ thuộc vào thao tác kỹ thuật khi xây hoặc đổi báo cáo; tăng khả năng truy nguyên số liệu và tiếp nhận yêu cầu bằng ngôn ngữ tự nhiên. Giá trị được đánh giá qua thời gian xử lý, độ chính xác và khả năng bàn giao.</p></article><article><h3>Cách nhân rộng</h3><p>Mỗi bộ phận chọn một báo cáo thật, dùng chung quy trình và prompt; thay nguồn, KPI và rule của nghiệp vụ. Người mới thực hành trên bản sao, kiểm một kỳ rồi dùng cho các kỳ sau.</p></article><article><h3>Bộ dùng lại tại đơn vị</h3><p>Nguồn dữ liệu + MAP + định nghĩa KPI/rule + báo cáo mẫu + prompt theo tình huống + checklist QA. Người tiếp nhận có đủ căn cứ để vận hành và điều chỉnh báo cáo cho đơn vị mình.</p></article></div><div class="reuse"><div><h3>Áp dụng cho nhiều nghiệp vụ</h3><p>Cập nhật nguồn → kiểm tra dữ liệu mới → bổ sung map nếu cần → báo cáo tính lại → QA kỳ mới.</p><p>Khi có nguồn dữ liệu và xác định được điều cần xem, Data2Sheet có thể mở rộng sang bán hàng, DVKH, PTTB kỹ thuật, CLL, tồn, thu hồi thiết bị, GSafe, quy hoạch và các báo cáo vận hành khác. Mỗi nghiệp vụ cần xác nhận riêng nguồn, MAP, quy tắc tính và người duyệt số liệu.</p></div><details class="follow"><summary>Ví dụ thực hành khi cập nhật nguồn <span>＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Prompt sau khi cập nhật dữ liệu</h4><span>Dùng trong cuộc chat đang làm báo cáo</span></div><button class="copy" data-copy="reuse-prompt">Sao chép</button></div><pre id="reuse-prompt">Tôi đã cập nhật nguồn trong Sheet ở link trên. Rà dữ liệu mới, nhân sự thiếu map và kỳ mới; cập nhật báo cáo theo rule hiện có. Không ghi đè raw data hoặc đổi rule. Đối soát kỳ mới và tổng lũy kế; liệt kê case chưa đủ thông tin và báo kết quả QA.</pre></div></details></div></section>
 </div></section>
 </div><div class="content-group" id="products"><nav class="local-nav" aria-label="Đi nhanh trong phần sản phẩm"><a href="#samples">Tổng quan</a><a href="#case-ibb">Kinh doanh</a><a href="#case-hcm">Theo đơn vị</a><a href="#case-pkt">Theo nhân sự</a><a href="#case-gt">Tiến độ</a></nav><div class="group-cap"><div><span>02</span><strong>Sản phẩm thực tế</strong></div><p>Xem sản phẩm, dữ liệu đầu vào, kết quả và cách tái tạo</p></div><div class="usage-four product-usage"><div><b>Mục đích</b><span>Xem sản phẩm thật đã áp dụng</span></div><div><b>Đầu vào</b><span>Dữ liệu nghiệp vụ + map/rule liên quan</span></div><div><b>Kết quả</b><span>Báo cáo, KPI, bộ lọc và link kiểm chứng</span></div><div><b>Bước tiếp theo</b><span>Tham khảo prompt mẫu hoặc sang tab 03 để áp dụng</span></div></div><section class="section" id="samples"><div class="section-title"><span class="section-num">02</span><div><h2>Sản phẩm ứng dụng thực tế</h2><p>Bốn sản phẩm tại SG10 minh họa cùng mô hình giải pháp trên các bài toán khác nhau: bán hàng, PTTB, quản lý nhân sự kỹ thuật và khu vực giải tỏa. Mỗi sản phẩm tập trung vào bài toán, dữ liệu, đầu ra và link kiểm chứng. Prompt triển khai nằm ngay trong thẻ sản phẩm để dùng lại trên nguồn khác; thư viện prompt vận hành được gom riêng ở phần 03.</p></div></div><details class="follow source-requirements"><summary>Cần những dữ liệu nào để làm lại từ đầu? <span>＋</span></summary><div class="quick-body"><div class="table-scroll"><table class="guide-table"><thead><tr><th>Sản phẩm</th><th>Data thô</th><th>Map / rule / nguồn bổ sung</th><th>Đầu ra</th></tr></thead><tbody><tr><td>IBB</td><td>MasterReport: HĐ, Ngày Online, ACC, CN quản lý/bán, Phòng; data RM.</td><td>ACC → CN/Phòng/Vùng; key HĐ ghép RM; ngày RM và tuổi thuê bao; quyền nguồn IMPORTRANGE.</td><td>Sản lượng, RM, tỷ lệ; chọn tiêu chí và sort tháng.</td></tr><tr><td>PTTB Dịch Thuật</td><td>Master theo kỳ: HĐ, CN Bán, Phòng, Ngày Online, Ngày hủy, trạng thái.</td><td>Kế hoạch theo SGx, số nhân sự nếu tính PTTB/NV; quy tắc loại hủy và cùng kỳ.</td><td>Trong ngày/lũy kế, %HT, rank, tăng trưởng.</td></tr><tr><td>PTTB PKT10</td><td>Dữ liệu nghiệp vụ chính và dữ liệu bổ sung.</td><td>Dữ liệu nhân sự/map, lịch sử hiệu lực, rule và kế hoạch; khóa nghiệp vụ → nhân sự/đơn vị.</td><td>Báo cáo kỳ, lũy kế và dashboard.</td></tr><tr><td>Giải tỏa</td><td>Ba nguồn khu vực: HĐ, nhân sự, CDD/NKN/RM và tháng sự kiện.</td><td>Khu vực → ĐT/KTV; số ảnh hưởng làm mẫu số; quy tắc đếm sự kiện/lịch sử.</td><td>Theo khu vực/đội, tháng, lũy kế và tỷ lệ.</td></tr></tbody></table></div><p class="setup-note">Data giao dịch không đủ để suy ra kế hoạch, nhân sự lịch sử hoặc tuổi thuê bao. Thiếu nguồn nào thì hỏi đúng nguồn đó và nêu KPI chưa thể hoàn thành; không tự đặt số.</p></div></details><div class="product-overview"><a href="#case-ibb" class="overview ibb"><span class="overview-num">01</span><h3>IBB bán vào SG10</h3><p>Sản lượng &amp; rời mạng sớm</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-hcm" class="overview hcm"><span class="overview-num">02</span><h3>PTTB Dịch Thuật HCM</h3><p>Online &amp; so sánh giữa SGx</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-pkt" class="overview pkt"><span class="overview-num">03</span><h3>PTTB PKT10</h3><p>KTV, tổng đội &amp; Dashboard</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-gt" class="overview gt"><span class="overview-num">04</span><h3>Khu vực giải tỏa</h3><p>CDD/RM/NKN &amp; lũy kế</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a></div><div class="design-chain"><b>Cách dùng prompt thiết kế:</b> AI đọc nguồn và map → nêu rule còn thiếu → bạn bổ sung/chốt rule → AI xây công thức và báo cáo → QA. Có Dashboard trong Sheet thì cùng dùng lớp tính; chưa có nguồn cho KPI nào thì để phần đó cần xác nhận.</div><p class="setup-note">Mở Sheet để xem sản phẩm; prompt trong từng sản phẩm là <b>mẫu tham khảo</b> về cách phân tích → thiết kế → tạo → QA, không cần nhập thông tin trước khi sao chép. Khi muốn áp dụng vào dữ liệu của mình, chuyển sang tab <b>03 · Thực hành &amp; Prompt</b>.</p><article class="case" id="case-ibb"><div class="case-head"><div><span class="label">01 / KINH DOANH · IBB &amp; RỜI MẠNG</span><h3>Thống Kê IBB Bán Vào SG10</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1ctujwobCNm8c9YjFQs2ahg5AwvgsqdbowGXOo4cx-hA/edit?gid=348465388" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-ibb">Sao chép prompt mẫu</button></div></div>
@@ -381,7 +377,7 @@ Hãy xác nhận ngắn gọn:
 
 Không phụ thuộc tên tab cố định nếu có thể nhận diện theo header/nội dung thực tế.</pre></div>
 </section>
-<section class="section" id="workflow"><div class="section-title"><span class="section-num">•</span><div><h2>Quy trình 7 bước từ Data đến Report</h2><p>Đọc theo một chiều: đưa dữ liệu → nói mục tiêu → AI phân tích → chốt rule → tạo → QA → tinh chỉnh.</p></div></div><div class="workflow-panel"><div class="workflow-grid"><div class="workflow-step data"><span>01</span><h3>Dữ liệu</h3><p>Đưa link Sheet hoặc file; giữ dữ liệu gốc.</p></div><div class="workflow-step goal"><span>02</span><h3>Mục tiêu</h3><p>Nói KPI, cấp cần xem và kỳ theo dõi.</p></div><div class="workflow-step audit"><span>03</span><h3>Đọc &amp; rà nguồn</h3><p>Xác định mỗi dòng, khóa nhận diện, cột ngày.</p></div><div class="workflow-step rule"><span>04</span><h3>Map &amp; rule</h3><p>Chốt nhân sự, đơn vị và cách tính KPI.</p></div><div class="workflow-step build"><span>05</span><h3>Xây báo cáo</h3><p>AI viết công thức, tổng hợp và bộ lọc.</p></div><div class="workflow-step qa"><span>06</span><h3>Đối soát</h3><p>So với nguồn; tìm HĐ/case gây lệch.</p></div><div class="workflow-step refine"><span>07</span><h3>Tinh chỉnh</h3><p>Đổi giao diện, thêm chỉ số, thử kỳ mới.</p></div></div><div class="workflow-rule"><b>Không cần một prompt dài để làm tất cả.</b> Mô tả rõ → xem kết quả → kiểm tra → yêu cầu chỉnh tiếp.</div></div><div class="scenario-grid"><a href="#practice" class="scenario"><span class="scenario-icon">＋</span><div><h3>Tạo báo cáo mới</h3><p>Prompt chung → làm rõ rule → AI xây → QA.</p><b>Bắt đầu với prompt chung →</b></div></a><a href="?view=products#samples" class="scenario"><span class="scenario-icon">↻</span><div><h3>Nâng cấp báo cáo có sẵn</h3><p>Đọc logic đang dùng → chỉnh đúng phần cần → QA.</p><b>Chọn báo cáo và prompt →</b></div></a><a href="#qa" class="scenario"><span class="scenario-icon">!</span><div><h3>Số liệu lệch hoặc lỗi</h3><p>Truy record khác biệt → tìm nguyên nhân → sửa → QA.</p><b>Dùng prompt kiểm tra &amp; sửa →</b></div></a></div><details class="terms"><summary>Thuật ngữ cần biết <span>＋</span></summary><div><p><b>Raw data:</b> dữ liệu gốc từ hệ thống. <b>Map:</b> bảng ghép ACC/mã nhân viên với nhân sự và đơn vị. <b>Rule:</b> quy tắc được tính hoặc loại trừ. <b>KPI:</b> chỉ số cần theo dõi. <b>QA:</b> kiểm tra, đối soát kết quả với nguồn.</p></div></details></section></div></details></section><section class="section" id="practice"><div class="section-title"><span class="section-num">05</span><div><h2>Điền yêu cầu, sao chép và trao đổi với AI</h2><p>Chuẩn bị đầu vào rõ ràng, dùng một prompt chung rồi trao đổi tiếp trong cùng cuộc chat.</p></div></div><div class="howto"><aside class="howto-side"><h3>Cách thực hiện</h3><ol><li><b>Đưa dữ liệu.</b> Gửi link Sheet hoặc file Excel; giữ tab nguồn.</li><li><b>Nói điều cần xem.</b> KPI, nhóm, kỳ tính và rule quan trọng.</li><li><b>Cho AI làm.</b> AI đọc cấu trúc, hỏi chỗ thiếu rồi thực hiện.</li><li><b>Kiểm tra.</b> So tổng với nguồn, rà HĐ/case lệch và bộ lọc.</li><li><b>Chỉnh tiếp.</b> Mô tả một thay đổi cụ thể; kiểm lại kết quả.</li></ol></aside><div><div class="builder"><h3>Prompt chung — điền yêu cầu và sao chép</h3><p>Không cần biết tên hàm. Chỉ cần mô tả kết quả muốn xem; nếu chưa rõ rule, ghi “cần xác nhận”.</p><div class="fields compact-two-fields"><label class="wide">Dữ liệu đầu vào / link Sheet<input id="f-link" type="text" placeholder="Dán link Sheet, tên file hoặc mô tả dữ liệu đang có" autocomplete="off"></label><label class="wide">Yêu cầu cần làm<input id="f-task" type="text" placeholder="Ví dụ: tạo báo cáo theo team/KTV, KPI Online, loại hủy, theo tháng" autocomplete="off"></label></div><div class="prompt"><div class="prompt-head"><div><h4>Prompt tạo/cập nhật báo cáo</h4><span>Sao chép → gửi ChatGPT → trả lời nếu AI hỏi rule</span></div><button class="copy" data-copy="general">Sao chép</button></div><pre id="general">Tôi có dữ liệu đầu vào sau:
+<section class="section" id="workflow"><div class="section-title"><span class="section-num">•</span><div><h2>Quy trình 7 bước từ Data đến Report</h2><p>Đọc theo một chiều: đưa dữ liệu → nói mục tiêu → AI phân tích → chốt rule → tạo → QA → tinh chỉnh.</p></div></div><div class="workflow-panel"><div class="workflow-grid"><div class="workflow-step data"><span>01</span><h3>Dữ liệu</h3><p>Đưa link Sheet hoặc file; giữ dữ liệu gốc.</p></div><div class="workflow-step goal"><span>02</span><h3>Mục tiêu</h3><p>Nói KPI, cấp cần xem và kỳ theo dõi.</p></div><div class="workflow-step audit"><span>03</span><h3>Đọc &amp; rà nguồn</h3><p>Xác định mỗi dòng, khóa nhận diện, cột ngày.</p></div><div class="workflow-step rule"><span>04</span><h3>Map &amp; rule</h3><p>Chốt nhân sự, đơn vị và cách tính KPI.</p></div><div class="workflow-step build"><span>05</span><h3>Xây báo cáo</h3><p>AI viết công thức, tổng hợp và bộ lọc.</p></div><div class="workflow-step qa"><span>06</span><h3>Đối soát</h3><p>So với nguồn; tìm HĐ/case gây lệch.</p></div><div class="workflow-step refine"><span>07</span><h3>Tinh chỉnh</h3><p>Đổi giao diện, thêm chỉ số, thử kỳ mới.</p></div></div><div class="workflow-rule"><b>Không cần một prompt dài để làm tất cả.</b> Mô tả rõ → xem kết quả → kiểm tra → yêu cầu chỉnh tiếp.</div></div><div class="scenario-grid"><a href="#practice" class="scenario"><span class="scenario-icon">＋</span><div><h3>Tạo báo cáo mới</h3><p>Prompt chung → làm rõ rule → AI xây → QA.</p><b>Bắt đầu với prompt chung →</b></div></a><a href="#samples" class="scenario"><span class="scenario-icon">↻</span><div><h3>Nâng cấp báo cáo có sẵn</h3><p>Đọc logic đang dùng → chỉnh đúng phần cần → QA.</p><b>Chọn báo cáo và prompt →</b></div></a><a href="#qa" class="scenario"><span class="scenario-icon">!</span><div><h3>Số liệu lệch hoặc lỗi</h3><p>Truy record khác biệt → tìm nguyên nhân → sửa → QA.</p><b>Dùng prompt kiểm tra &amp; sửa →</b></div></a></div><details class="terms"><summary>Thuật ngữ cần biết <span>＋</span></summary><div><p><b>Raw data:</b> dữ liệu gốc từ hệ thống. <b>Map:</b> bảng ghép ACC/mã nhân viên với nhân sự và đơn vị. <b>Rule:</b> quy tắc được tính hoặc loại trừ. <b>KPI:</b> chỉ số cần theo dõi. <b>QA:</b> kiểm tra, đối soát kết quả với nguồn.</p></div></details></section></div></details></section><section class="section" id="practice"><div class="section-title"><span class="section-num">05</span><div><h2>Điền yêu cầu, sao chép và trao đổi với AI</h2><p>Chuẩn bị đầu vào rõ ràng, dùng một prompt chung rồi trao đổi tiếp trong cùng cuộc chat.</p></div></div><div class="howto"><aside class="howto-side"><h3>Cách thực hiện</h3><ol><li><b>Đưa dữ liệu.</b> Gửi link Sheet hoặc file Excel; giữ tab nguồn.</li><li><b>Nói điều cần xem.</b> KPI, nhóm, kỳ tính và rule quan trọng.</li><li><b>Cho AI làm.</b> AI đọc cấu trúc, hỏi chỗ thiếu rồi thực hiện.</li><li><b>Kiểm tra.</b> So tổng với nguồn, rà HĐ/case lệch và bộ lọc.</li><li><b>Chỉnh tiếp.</b> Mô tả một thay đổi cụ thể; kiểm lại kết quả.</li></ol></aside><div><div class="builder"><h3>Prompt chung — điền yêu cầu và sao chép</h3><p>Không cần biết tên hàm. Chỉ cần mô tả kết quả muốn xem; nếu chưa rõ rule, ghi “cần xác nhận”.</p><div class="fields compact-two-fields"><label class="wide">Dữ liệu đầu vào / link Sheet<input id="f-link" type="text" placeholder="Dán link Sheet, tên file hoặc mô tả dữ liệu đang có" autocomplete="off"></label><label class="wide">Yêu cầu cần làm<input id="f-task" type="text" placeholder="Ví dụ: tạo báo cáo theo team/KTV, KPI Online, loại hủy, theo tháng" autocomplete="off"></label></div><div class="prompt"><div class="prompt-head"><div><h4>Prompt tạo/cập nhật báo cáo</h4><span>Sao chép → gửi ChatGPT → trả lời nếu AI hỏi rule</span></div><button class="copy" data-copy="general">Sao chép</button></div><pre id="general">Tôi có dữ liệu đầu vào sau:
 [LINK SHEET]
 
 Yêu cầu cần làm:
@@ -705,88 +701,75 @@ SR DEMO-01: KH phản ánh Wi-Fi chập chờn buổi tối, ảnh hưởng họ
 Phân tích và chuẩn bị tư vấn. Sau đó tôi sẽ bổ sung kết quả kiểm tra trong cùng chat.</pre></div></div></details><div class="table-scroll"><table class="guide-table"><thead><tr><th>Lượt thử</th><th>Bổ sung / tình huống</th><th>Đầu ra cần đạt</th></tr></thead><tbody><tr><td>1 · Nhận SR</td><td>Dùng DEMO-01 ở trên.</td><td>Không khẳng định đã hết lỗi; hỏi phạm vi LAN/Wi-Fi, kiểm voucher; không hứa lịch KTV.</td></tr><tr><td>2 · Có dữ kiện mới</td><td>“DEMO-01, 06/10 09:00: KH xác nhận LAN ổn, 2 thiết bị Wi-Fi đều chập chờn.”</td><td>Ghép đúng case, không hỏi lại LAN; tập trung kiểm Wi-Fi nhưng chưa kết luận nguyên nhân.</td></tr><tr><td>3 · Có mâu thuẫn</td><td>“Note nội bộ ghi KH đồng ý đóng SR, chưa có kết quả cuộc gọi xác nhận.”</td><td>Giữ cả hai thông tin, hỏi xác minh; không tự đóng SR hoặc ghi KH hài lòng.</td></tr><tr><td>4 · Sau cuộc gọi</td><td>“KH còn lỗi, đồng ý kiểm tra tiếp; lịch 07/10 14:00 đã được điều phối xác nhận.”</td><td>Ghi đúng kết quả/lịch hẹn, cập nhật bước tiếp theo; chỉ dùng thời gian đã xác nhận.</td></tr><tr><td>5 · Đổi case / chat</td><td>Gửi SR khác không có mã; hoặc dùng /BANGIAO rồi dán chat mới.</td><td>Hỏi phân biệt case, không trộn hồ sơ; chat mới dùng dữ liệu bàn giao và kiểm trạng thái hiện tại.</td></tr></tbody></table></div><p class="setup-note">Bảng là kịch bản nghiệm thu để nhân viên chạy thử; không phải kết quả đã kiểm thử trực tiếp trên một dịch vụ AI/CRM.</p></div></details><div class="callout"><b>Nhân rộng cho DVKH:</b> dùng chung prompt nền và mẫu hồ sơ; mỗi đơn vị bổ sung tài liệu chính sách còn hiệu lực, luồng chuyển cấp và người theo dõi. Thử case mẫu → người phụ trách duyệt lời thoại → dùng trong ca làm → ghi nhận lỗi để chỉnh prompt. Theo dõi thời gian chuẩn bị, phần phải sửa và phản hồi của nhân viên; không mặc định hiệu quả đã được chứng minh.</div></section></div><footer class="footer"><span>Data2Sheet SG10 · Đề tài ứng dụng AI trong báo cáo nghiệp vụ</span><span><span class="signature-credit">Designed with <span class="signature-heart" aria-label="love">♥</span> by <b>NamHH</b> · FPT Telecom SG10</span></span></footer></main><button class="backtop" aria-label="Về đầu trang" title="Về đầu trang">↑</button><div class="toast" role="status" aria-live="polite"></div>
 <script>
 
-const VIEW_GROUPS={
- intro:{ids:['overview'],label:'01 · GIỚI THIỆU & PHƯƠNG PHÁP'},
- products:{ids:['products'],label:'02 · SẢN PHẨM THỰC TẾ'},
- prompts:{ids:['guide','prompts'],label:'03 · PROMPT & HƯỚNG DẪN'},
- advanced:{ids:['dashboard','cskh'],label:'04 · MỞ RỘNG · DASHBOARD & AI CSKH'}
-};
-function currentView(){
- const h=(location.hash||'').replace('#','');
- if(h){
-   for(const [v,g] of Object.entries(VIEW_GROUPS)){
-     if(g.ids.some(id=>id===h||document.getElementById(id)?.querySelector('#'+CSS.escape(h)))) return v;
-   }
- }
- const p=new URLSearchParams(location.search).get('view');
- if(VIEW_GROUPS[p]) return p;
- return 'intro';
-}
-function syncViewState(v){
- document.body.dataset.view=v;
- document.body.classList.add('view-ready');
+const PAGE_SECTIONS=[
+ {key:'intro',anchor:'overview'},
+ {key:'products',anchor:'products'},
+ {key:'prompts',anchor:'guide'},
+ {key:'advanced',anchor:'dashboard'}
+];
+
+function setActiveTopTab(key){
  document.querySelectorAll('[data-view-link]').forEach(a=>{
-   const on=a.dataset.viewLink===v;
-   a.classList.remove('active');
-   if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+   const on=a.dataset.viewLink===key;
+   a.classList.toggle('active',on);
+   if(on)a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
  });
- for(const [view,g] of Object.entries(VIEW_GROUPS)){
-   g.ids.forEach((id,idx)=>{
-     const el=document.getElementById(id); if(!el)return;
-     el.dataset.groupLabel=idx===0?g.label:'';
-   });
+}
+
+function sectionKeyForScroll(){
+ const headerH=document.querySelector('.top')?.offsetHeight||82;
+ const probe=window.scrollY+headerH+80;
+ let active='intro';
+ for(const item of PAGE_SECTIONS){
+   const el=document.getElementById(item.anchor);
+   if(el && el.offsetTop<=probe) active=item.key;
  }
+ return active;
 }
-function applyView(){syncViewState(currentView())}
-function viewUrl(view,hash){
- const base=location.pathname;
- return base+'?view='+encodeURIComponent(view)+(hash||'');
-}
-function scrollToViewTarget(hash,instant=false){
- const target=hash?document.getElementById(hash.replace(/^#/,'')):null;
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const behavior=instant||reduce?'auto':'smooth';
- if(target){revealTarget(target);target.scrollIntoView({block:'start',behavior})}
- else window.scrollTo({top:0,behavior});
-}
-function switchView(view,hash='',push=true){
- if(!VIEW_GROUPS[view])return;
- const current=document.body.dataset.view||currentView();
- if(current===view){
-   if(push)history.pushState({view},'',viewUrl(view,hash));
-   if(hash)scrollToViewTarget(hash,false);
-   return;
- }
- if(push)history.pushState({view},'',viewUrl(view,hash));
- // Cross-tab navigation: swap immediately, then position instantly.
- // Avoid full-page View Transition / smooth scrolling because the tab heights differ.
- syncViewState(view);
- window.scrollTo({top:0,behavior:'auto'});
- requestAnimationFrame(()=>{
-   if(hash)scrollToViewTarget(hash,true);
-   const visible=VIEW_GROUPS[view].ids.map(id=>document.getElementById(id)).filter(Boolean);
-   visible.forEach(el=>el.animate?.([{opacity:.9},{opacity:1}],{duration:110,easing:'ease-out'}));
+
+let navFrame=0;
+function updateOnePageState(){
+ if(navFrame)return;
+ navFrame=requestAnimationFrame(()=>{
+   navFrame=0;
+   setActiveTopTab(sectionKeyForScroll());
    progress();
  });
 }
-applyView();
 
-// Intercept every internal link that carries ?view=... so GitHub Pages never reloads.
-document.querySelectorAll('a[href*="?view="]').forEach(a=>a.addEventListener('click',event=>{
- if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
- const url=new URL(a.href,location.href);
- if(url.origin!==location.origin||url.pathname!==location.pathname)return;
- const view=url.searchParams.get('view');
- if(!VIEW_GROUPS[view])return;
- event.preventDefault();
- switchView(view,url.hash||'',true);
-}));
+function scrollToAnchor(id,push=true){
+ const target=document.getElementById(id);
+ if(!target)return;
+ revealTarget(target);
+ const headerH=document.querySelector('.top')?.offsetHeight||82;
+ const top=Math.max(0,target.getBoundingClientRect().top+window.scrollY-headerH-14);
+ if(push && location.hash!=='#'+id) history.pushState(null,'','#'+id);
+ window.scrollTo({top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
 
-window.addEventListener('popstate',()=>{
- applyView();
- window.scrollTo({top:0,behavior:'auto'});
- requestAnimationFrame(()=>{if(location.hash)scrollToViewTarget(location.hash,true);progress()});
+document.querySelectorAll('.view-nav a[href^="#"], .brand[href^="#"]').forEach(a=>{
+ a.addEventListener('click',event=>{
+   const id=hashKey(a.getAttribute('href'));
+   if(!document.getElementById(id))return;
+   event.preventDefault();
+   scrollToAnchor(id,true);
+ });
 });
+
+// Old shared links with ?view=... are normalized to plain hash on load.
+if(location.search && location.hash){
+ history.replaceState(null,'',location.pathname+location.hash);
+}
+
+window.addEventListener('scroll',updateOnePageState,{passive:true});
+window.addEventListener('resize',updateOnePageState);
+window.addEventListener('popstate',()=>{
+ const id=hashKey(location.hash);
+ if(id) requestAnimationFrame(()=>scrollToAnchor(id,false));
+ else window.scrollTo({top:0,behavior:'auto'});
+ updateOnePageState();
+});
+requestAnimationFrame(()=>setActiveTopTab(sectionKeyForScroll()));
 
 function practicalPromptBuilder(pre){
  const prompt=pre.closest('.prompt'); if(!prompt||prompt.querySelector('.prompt-vars'))return;
@@ -829,9 +812,18 @@ const navLinks=[...document.querySelectorAll('.view-nav a')];
 function hashKey(hash){try{return decodeURIComponent((hash||'').replace(/^#/,''))}catch(e){return ''}}
 function revealTarget(target){for(let parent=target?.parentElement;parent;parent=parent.parentElement){if(parent.tagName==='DETAILS')parent.open=true}}
 function progress(){document.querySelector('.backtop').classList.toggle('visible',window.scrollY>650);const max=document.documentElement.scrollHeight-window.innerHeight;const ratio=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;document.querySelector('.progress').style.transform='scaleX('+ratio+')'}
-window.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);progress();
-function navigateHash(){const target=document.getElementById(hashKey(location.hash));if(target){revealTarget(target);target.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}}
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',event=>{const target=document.getElementById(hashKey(a.getAttribute('href')));if(!target)return;event.preventDefault();if(a.dataset.viewLink){location.href=a.href;return} if(location.hash!==a.getAttribute('href'))history.pushState(null,'',a.getAttribute('href'));navigateHash()}));window.addEventListener('hashchange',navigateHash);window.addEventListener('popstate',navigateHash);if(location.hash)requestAnimationFrame(navigateHash);
+progress();
+function navigateHash(){const id=hashKey(location.hash);if(id)scrollToAnchor(id,false)}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+ if(a.closest('.view-nav')||a.classList.contains('brand'))return;
+ a.addEventListener('click',event=>{
+   const id=hashKey(a.getAttribute('href'));
+   if(!document.getElementById(id))return;
+   event.preventDefault();
+   scrollToAnchor(id,true);
+ });
+});
+if(location.hash)requestAnimationFrame(()=>navigateHash());
 
 document.querySelector('.backtop').addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 // Content stays visible if scripting or motion is unavailable.
