@@ -188,6 +188,14 @@ body[data-view="advanced"] #dashboard+#cskh{margin-top:12px}
 .platform-note{margin:12px 0 16px;padding:13px 15px;border-radius:10px;background:#f3f7fa;border:1px solid #d8e4ec;color:#4f687a;font-size:14px}
 .purpose-note{margin:5px 0 12px;color:#5c7282;font-size:14px}
 @media(max-width:800px){.connect-steps{grid-template-columns:1fr}}
+
+/* Deterministic top-tab state: exactly one tab follows the visible view */
+.view-nav a,.view-nav a.active,.view-nav a[aria-current="page"]{background:transparent!important;box-shadow:none!important;border-color:transparent!important;color:#5b7182!important}
+.view-nav a:hover{background:#eef5fa!important;color:#175b7e!important}
+body[data-view="intro"] .view-nav a[data-view-link="intro"],
+body[data-view="products"] .view-nav a[data-view-link="products"],
+body[data-view="prompts"] .view-nav a[data-view-link="prompts"],
+body[data-view="advanced"] .view-nav a[data-view-link="advanced"]{background:#e3f1fb!important;color:#005f9f!important;border-color:#c9dfef!important;box-shadow:inset 0 -2px #0072bc!important}
 </style></head><body>
 <header class="top"><div class="top-in"><a class="brand" href="?view=intro#overview">DATA<span>2</span>SHEET</a><nav class="view-nav" aria-label="Khu vực nội dung"><a data-view-link="intro" href="?view=intro#overview">01 · Đề tài &amp; giải pháp</a><a data-view-link="products" href="?view=products#products">02 · Sản phẩm thực tế</a><a data-view-link="prompts" href="?view=prompts#guide">03 · Thực hành &amp; Prompt</a><a data-view-link="advanced" href="?view=advanced#dashboard">04 · Ứng dụng mở rộng</a></nav></div><div class="progress" aria-hidden="true"></div></header><main class="page"><div class="content-group" id="overview"><div class="group-cap"><div><span>01</span><strong>Giới thiệu đề tài</strong></div><p>Vấn đề → giải pháp → cách làm → giá trị ứng dụng</p></div><section class="hero" id="start"><div class="hero-main"><span class="label">ĐỀ TÀI DỰ THI · GIẢI PHÁP ỨNG DỤNG AI TẠI SG10</span><h1>Data<span>2</span>Sheet SG10</h1><p class="lead">Ứng dụng AI trong xây dựng<br><span class="hero-emphasis">và vận hành báo cáo nghiệp vụ.</span></p><p class="sub">Data2Sheet SG10 đề xuất cách chuyển dữ liệu thô thành báo cáo bằng hội thoại với AI, áp dụng cho Kinh doanh – Dịch vụ khách hàng – Kỹ thuật. Người dùng xác định dữ liệu, KPI và nghiệp vụ; AI hỗ trợ cấu trúc, công thức và trình bày; con người kiểm tra và quyết định sử dụng kết quả.</p><div class="hero-actions"><a class="button primary" href="#problem">Khám phá giải pháp <span aria-hidden="true">→</span></a><a class="button" href="?view=products#samples">Xem sản phẩm thực tế</a></div></div><aside class="hero-aside"><span class="label">MÔ HÌNH GIẢI PHÁP</span><ol class="path"><li><em>01</em>Có dữ liệu</li><li><em>02</em>Nói điều cần xem</li><li><em>03</em>AI hỗ trợ xây báo cáo</li><li><em>04</em>Con người kiểm tra</li><li><em>05</em>Tinh chỉnh &amp; dùng lại</li></ol><p>Người làm nghiệp vụ giữ vai trò xác định KPI, chốt rule và quyết định sử dụng kết quả.</p></aside></section>
 <section class="section" id="problem"><div class="section-title"><span class="section-num">01</span><div><h2>Vấn đề thực tế &amp; giải pháp đề xuất</h2><p>Từ nhu cầu theo dõi sản lượng, chất lượng và tiến độ tại SG10 đến công cụ báo cáo có thể kiểm tra, cập nhật và bàn giao.</p></div></div><div class="cols"><article class="card"><h3>Thực trạng &amp; nhu cầu</h3><ul><li>Phải lọc dữ liệu, ghép nhân sự, tính KPI và trình bày lại báo cáo.</li><li>Mỗi lần đổi tháng, thêm chỉ số hoặc chỉnh bộ lọc đều phải rà công thức.</li><li>Số liệu có thể lệch do trùng HĐ, sai ngày ghi nhận, nhầm đơn vị hoặc thiếu map.</li><li>Người hiểu nghiệp vụ còn phụ thuộc người thành thạo Excel/Google Sheets.</li></ul></article><article class="card highlight"><h3>Giải pháp Data2Sheet SG10</h3><ul><li>Dùng ChatGPT chuyển yêu cầu bằng ngôn ngữ tự nhiên thành cấu trúc, map và công thức.</li><li>Khai thác nguồn trên Google Sheet qua kết nối được cấp quyền; khi chưa có công cụ ghi, AI cung cấp công thức hoặc mã để người dùng triển khai.</li><li>Đối chiếu báo cáo với nguồn; truy đúng HĐ/case khi có lệch số.</li><li>Hoàn thiện qua hội thoại và dùng lại khi cập nhật dữ liệu.</li></ul></article></div><div class="callout">Người dùng nói <b>“Tôi muốn xem gì”</b>. AI hỗ trợ thực hiện phần kỹ thuật; <b>người dùng xác nhận nghiệp vụ và kiểm tra kết quả</b>.</div><div class="extension-overview"><div><span class="appendix-label">MỞ RỘNG CÙNG CÁCH LÀM</span><h3>Hai ứng dụng nâng cao</h3><p>Mô hình có thể mở rộng từ báo cáo trên Sheet sang dashboard tương tác và trợ lý phân tích SR cho DVKH. Hai ứng dụng bổ trợ thể hiện hướng phát triển của đề tài.</p></div><a class="button" href="?view=advanced#dashboard">Dashboard Apps Script →</a><a class="button" href="?view=advanced#cskh">AI CSKH Assistant →</a></div><div class="competition-core"><section class="section" id="roles"><div class="section-title"><span class="section-num">•</span><div><h2>AI làm phần kỹ thuật. Con người giữ nghiệp vụ.</h2><p>Giải pháp giữ hệ thống nguồn làm căn cứ và giữ quyền quyết định KPI ở người phụ trách. AI hoàn tất thao tác không đồng nghĩa số liệu đã được duyệt.</p></div></div><div class="roles"><article class="card"><span class="label">CON NGƯỜI</span><h3>Nói đúng điều cần xem</h3><p>Xác định nguồn chuẩn, KPI, cấp quản trị và mục tiêu sử dụng. Chốt kỳ tính, quy tắc hủy/trùng, phân công và ngoại lệ trước khi tính toán.</p></article><article class="card"><span class="label">AI HỖ TRỢ</span><h3>Chuyển nghiệp vụ thành báo cáo</h3><p>Rà dữ liệu, đề xuất MAP/MASTER, viết công thức, dựng báo cáo và bộ lọc; truy chênh lệch và tinh chỉnh theo phản hồi của người dùng.</p></article><article class="card"><span class="label">KIỂM SOÁT</span><h3>QA trước khi sử dụng</h3><p>Đối soát từ từng bản ghi nguồn đến nhóm và tổng báo cáo; kiểm kỳ, bộ lọc và ngoại lệ. Người phụ trách xác nhận số liệu trước khi dùng để điều hành.</p></article></div></section>
@@ -662,17 +670,21 @@ const VIEW_GROUPS={
  advanced:{ids:['dashboard','cskh'],label:'04 · MỞ RỘNG · DASHBOARD & AI CSKH'}
 };
 function currentView(){
+ const h=(location.hash||'').replace('#','');
+ if(h){
+   for(const [v,g] of Object.entries(VIEW_GROUPS)){
+     if(g.ids.some(id=>id===h||document.getElementById(id)?.querySelector('#'+CSS.escape(h)))) return v;
+   }
+ }
  const p=new URLSearchParams(location.search).get('view');
  if(VIEW_GROUPS[p]) return p;
- const h=(location.hash||'').replace('#','');
- for(const [v,g] of Object.entries(VIEW_GROUPS)) if(g.ids.some(id=>id===h||document.getElementById(id)?.querySelector('#'+CSS.escape(h)))) return v;
  return 'intro';
 }
 function applyView(){
  const v=currentView();
  document.body.dataset.view=v;
  document.body.classList.add('view-ready');
- document.querySelectorAll('[data-view-link]').forEach(a=>{const on=a.dataset.viewLink===v;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ document.querySelectorAll('[data-view-link]').forEach(a=>{a.classList.remove('active');const on=a.dataset.viewLink===v;if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  for(const [view,g] of Object.entries(VIEW_GROUPS)){
    g.ids.forEach((id,idx)=>{
      const el=document.getElementById(id); if(!el)return;
@@ -681,6 +693,11 @@ function applyView(){
  }
 }
 applyView();
+document.querySelectorAll('[data-view-link]').forEach(a=>a.addEventListener('click',()=>{
+ const v=a.dataset.viewLink;
+ if(VIEW_GROUPS[v]){document.body.dataset.view=v;document.querySelectorAll('[data-view-link]').forEach(x=>{if(x===a)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')})}
+}));
+
 window.addEventListener('popstate',applyView);
 
 function practicalPromptBuilder(pre){
