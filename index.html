@@ -208,6 +208,16 @@ body[data-view="advanced"] .view-nav a[data-view-link="advanced"]{background:#e3
 .setup-flow-mini span{background:#fff;border:1px solid #d2e0ea;border-radius:999px;padding:5px 9px;font-weight:650}
 .setup-flow-mini i{font-style:normal;color:#8ba5b6}
 @media(max-width:800px){.tool-setup-grid{grid-template-columns:1fr}.setup-flow-mini i{display:none}}
+
+/* Single-page tab navigation */
+html{scroll-behavior:smooth}
+.progress{left:0!important;right:0!important;width:100%!important;height:3px!important;transform:scaleX(0);transform-origin:left center;transition:transform .07s linear;will-change:transform;background:linear-gradient(90deg,#f37021 0 34%,#0072bc 34% 67%,#00a859 67%)!important}
+body.view-ready .content-group{contain:layout paint}
+::view-transition-old(root){animation:dsFadeOut .16s ease both}
+::view-transition-new(root){animation:dsFadeIn .24s cubic-bezier(.2,.7,.2,1) both}
+@keyframes dsFadeOut{to{opacity:.72;transform:translateY(-3px)}}
+@keyframes dsFadeIn{from{opacity:.72;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.progress{transition:none}::view-transition-old(root),::view-transition-new(root){animation:none}}
 </style></head><body>
 <header class="top"><div class="top-in"><a class="brand" href="?view=intro#overview">DATA<span>2</span>SHEET</a><nav class="view-nav" aria-label="Khu vực nội dung"><a data-view-link="intro" href="?view=intro#overview">01 · Đề tài &amp; giải pháp</a><a data-view-link="products" href="?view=products#products">02 · Sản phẩm thực tế</a><a data-view-link="prompts" href="?view=prompts#guide">03 · Thực hành &amp; Prompt</a><a data-view-link="advanced" href="?view=advanced#dashboard">04 · Ứng dụng mở rộng</a></nav></div><div class="progress" aria-hidden="true"></div></header><main class="page"><div class="content-group" id="overview"><div class="group-cap"><div><span>01</span><strong>Giới thiệu đề tài</strong></div><p>Vấn đề → giải pháp → cách làm → giá trị ứng dụng</p></div><section class="hero" id="start"><div class="hero-main"><span class="label">ĐỀ TÀI DỰ THI · GIẢI PHÁP ỨNG DỤNG AI TẠI SG10</span><h1>Data<span>2</span>Sheet SG10</h1><p class="lead">Ứng dụng AI trong xây dựng<br><span class="hero-emphasis">và vận hành báo cáo nghiệp vụ.</span></p><p class="sub">Data2Sheet SG10 đề xuất cách chuyển dữ liệu thô thành báo cáo bằng hội thoại với AI, áp dụng cho Kinh doanh – Dịch vụ khách hàng – Kỹ thuật. Người dùng xác định dữ liệu, KPI và nghiệp vụ; AI hỗ trợ cấu trúc, công thức và trình bày; con người kiểm tra và quyết định sử dụng kết quả.</p><div class="hero-actions"><a class="button primary" href="#problem">Khám phá giải pháp <span aria-hidden="true">→</span></a><a class="button" href="?view=products#samples">Xem sản phẩm thực tế</a></div></div><aside class="hero-aside"><span class="label">MÔ HÌNH GIẢI PHÁP</span><ol class="path"><li><em>01</em>Có dữ liệu</li><li><em>02</em>Nói điều cần xem</li><li><em>03</em>AI hỗ trợ xây báo cáo</li><li><em>04</em>Con người kiểm tra</li><li><em>05</em>Tinh chỉnh &amp; dùng lại</li></ol><p>Người làm nghiệp vụ giữ vai trò xác định KPI, chốt rule và quyết định sử dụng kết quả.</p></aside></section>
 <section class="section" id="problem"><div class="section-title"><span class="section-num">01</span><div><h2>Vấn đề thực tế &amp; giải pháp đề xuất</h2><p>Từ nhu cầu theo dõi sản lượng, chất lượng và tiến độ tại SG10 đến công cụ báo cáo có thể kiểm tra, cập nhật và bàn giao.</p></div></div><div class="cols"><article class="card"><h3>Thực trạng &amp; nhu cầu</h3><ul><li>Phải lọc dữ liệu, ghép nhân sự, tính KPI và trình bày lại báo cáo.</li><li>Mỗi lần đổi tháng, thêm chỉ số hoặc chỉnh bộ lọc đều phải rà công thức.</li><li>Số liệu có thể lệch do trùng HĐ, sai ngày ghi nhận, nhầm đơn vị hoặc thiếu map.</li><li>Người hiểu nghiệp vụ còn phụ thuộc người thành thạo Excel/Google Sheets.</li></ul></article><article class="card highlight"><h3>Giải pháp Data2Sheet SG10</h3><ul><li>Dùng ChatGPT chuyển yêu cầu bằng ngôn ngữ tự nhiên thành cấu trúc, map và công thức.</li><li>Khai thác nguồn trên Google Sheet qua kết nối được cấp quyền; khi chưa có công cụ ghi, AI cung cấp công thức hoặc mã để người dùng triển khai.</li><li>Đối chiếu báo cáo với nguồn; truy đúng HĐ/case khi có lệch số.</li><li>Hoàn thiện qua hội thoại và dùng lại khi cập nhật dữ liệu.</li></ul></article></div><div class="callout">Người dùng nói <b>“Tôi muốn xem gì”</b>. AI hỗ trợ thực hiện phần kỹ thuật; <b>người dùng xác nhận nghiệp vụ và kiểm tra kết quả</b>.</div><div class="extension-overview"><div><span class="appendix-label">MỞ RỘNG CÙNG CÁCH LÀM</span><h3>Hai ứng dụng nâng cao</h3><p>Mô hình có thể mở rộng từ báo cáo trên Sheet sang dashboard tương tác và trợ lý phân tích SR cho DVKH. Hai ứng dụng bổ trợ thể hiện hướng phát triển của đề tài.</p></div><a class="button" href="?view=advanced#dashboard">Dashboard Apps Script →</a><a class="button" href="?view=advanced#cskh">AI CSKH Assistant →</a></div><div class="competition-core"><section class="section" id="roles"><div class="section-title"><span class="section-num">•</span><div><h2>AI làm phần kỹ thuật. Con người giữ nghiệp vụ.</h2><p>Giải pháp giữ hệ thống nguồn làm căn cứ và giữ quyền quyết định KPI ở người phụ trách. AI hoàn tất thao tác không đồng nghĩa số liệu đã được duyệt.</p></div></div><div class="roles"><article class="card"><span class="label">CON NGƯỜI</span><h3>Nói đúng điều cần xem</h3><p>Xác định nguồn chuẩn, KPI, cấp quản trị và mục tiêu sử dụng. Chốt kỳ tính, quy tắc hủy/trùng, phân công và ngoại lệ trước khi tính toán.</p></article><article class="card"><span class="label">AI HỖ TRỢ</span><h3>Chuyển nghiệp vụ thành báo cáo</h3><p>Rà dữ liệu, đề xuất MAP/MASTER, viết công thức, dựng báo cáo và bộ lọc; truy chênh lệch và tinh chỉnh theo phản hồi của người dùng.</p></article><article class="card"><span class="label">KIỂM SOÁT</span><h3>QA trước khi sử dụng</h3><p>Đối soát từ từng bản ghi nguồn đến nhóm và tổng báo cáo; kiểm kỳ, bộ lọc và ngoại lệ. Người phụ trách xác nhận số liệu trước khi dùng để điều hành.</p></article></div></section>
@@ -697,7 +707,7 @@ Ghép vào hồ sơ đang có, không hỏi lại dữ kiện đã cung cấp. N
 Tạo hồ sơ bàn giao ngắn cho case hiện tại: mã đã che, dịch vụ, phản ánh/nhu cầu, timeline và nguồn, thông tin đã xác nhận, điểm thiếu/mâu thuẫn, chính sách được phép áp dụng, lịch hẹn/người theo dõi, bước tiếp theo và phiên bản hồ sơ. Không suy đoán dữ kiện. Dùng định dạng dễ copy; khi tôi dán vào chat mới, yêu cầu xác nhận đây là case cần tiếp tục và kiểm tra trạng thái/chính sách có thay đổi không.</pre></div></div></details><div class="quick-command"><code>/GOI</code> Lời thoại · <code>/TUVAN</code> Phương án · <code>/NOTE</code> Note · <code>/TINNHAN</code> Tin nhắn · <code>/TOMTAT</code> Tóm tắt · <code>/FULL</code> Đầy đủ</div></div></details><details class="follow"><summary>Thực hành nhanh &amp; tiêu chí kiểm thử prompt<span aria-hidden="true">＋</span></summary><div class="quick-body"><details class="follow prompt-fold"><summary><b>SR giả lập để thử prompt</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Ví dụ minh họa; kiểm đầu ra theo bảng dưới</span></div><button class="copy" data-copy="cskh-trial">Sao chép prompt</button></div><pre id="cskh-trial">/FULL
 TÌNH HUỐNG GIẢ LẬP – KHÔNG PHẢI DỮ LIỆU KH THẬT
 SR DEMO-01: KH phản ánh Wi-Fi chập chờn buổi tối, ảnh hưởng họp online; đã liên hệ 2 lần. Note KTV 05/10 lúc 14:00: “đã đổi ONT, kiểm tra tại chỗ ổn”. KH báo 06/10 lúc 08:30: “tối qua vẫn bị”. Chưa có kiểm tra LAN, mức ảnh hưởng các thiết bị hoặc lịch hẹn mới. Lịch sử chỉ ghi “có voucher”, không có chương trình/điều kiện.
-Phân tích và chuẩn bị tư vấn. Sau đó tôi sẽ bổ sung kết quả kiểm tra trong cùng chat.</pre></div></div></details><div class="table-scroll"><table class="guide-table"><thead><tr><th>Lượt thử</th><th>Bổ sung / tình huống</th><th>Đầu ra cần đạt</th></tr></thead><tbody><tr><td>1 · Nhận SR</td><td>Dùng DEMO-01 ở trên.</td><td>Không khẳng định đã hết lỗi; hỏi phạm vi LAN/Wi-Fi, kiểm voucher; không hứa lịch KTV.</td></tr><tr><td>2 · Có dữ kiện mới</td><td>“DEMO-01, 06/10 09:00: KH xác nhận LAN ổn, 2 thiết bị Wi-Fi đều chập chờn.”</td><td>Ghép đúng case, không hỏi lại LAN; tập trung kiểm Wi-Fi nhưng chưa kết luận nguyên nhân.</td></tr><tr><td>3 · Có mâu thuẫn</td><td>“Note nội bộ ghi KH đồng ý đóng SR, chưa có kết quả cuộc gọi xác nhận.”</td><td>Giữ cả hai thông tin, hỏi xác minh; không tự đóng SR hoặc ghi KH hài lòng.</td></tr><tr><td>4 · Sau cuộc gọi</td><td>“KH còn lỗi, đồng ý kiểm tra tiếp; lịch 07/10 14:00 đã được điều phối xác nhận.”</td><td>Ghi đúng kết quả/lịch hẹn, cập nhật bước tiếp theo; chỉ dùng thời gian đã xác nhận.</td></tr><tr><td>5 · Đổi case / chat</td><td>Gửi SR khác không có mã; hoặc dùng /BANGIAO rồi dán chat mới.</td><td>Hỏi phân biệt case, không trộn hồ sơ; chat mới dùng dữ liệu bàn giao và kiểm trạng thái hiện tại.</td></tr></tbody></table></div><p class="setup-note">Bảng là kịch bản nghiệm thu để nhân viên chạy thử; không phải kết quả đã kiểm thử trực tiếp trên một dịch vụ AI/CRM.</p></div></details><div class="callout"><b>Nhân rộng cho DVKH:</b> dùng chung prompt nền và mẫu hồ sơ; mỗi đơn vị bổ sung tài liệu chính sách còn hiệu lực, luồng chuyển cấp và người theo dõi. Thử case mẫu → người phụ trách duyệt lời thoại → dùng trong ca làm → ghi nhận lỗi để chỉnh prompt. Theo dõi thời gian chuẩn bị, phần phải sửa và phản hồi của nhân viên; không mặc định hiệu quả đã được chứng minh.</div></section></div><footer class="footer"><span>Data2Sheet SG10 · Đề tài ứng dụng AI trong báo cáo nghiệp vụ</span><span><span class="signature-credit">Designed with <span class="signature-heart" aria-label="love">♥</span> by <b>NamHH</b> · FPT Telecom SG10</span> · <button class="print" onclick="window.print()">In / PDF</button></span></footer></main><button class="backtop" aria-label="Về đầu trang" title="Về đầu trang">↑</button><div class="toast" role="status" aria-live="polite"></div>
+Phân tích và chuẩn bị tư vấn. Sau đó tôi sẽ bổ sung kết quả kiểm tra trong cùng chat.</pre></div></div></details><div class="table-scroll"><table class="guide-table"><thead><tr><th>Lượt thử</th><th>Bổ sung / tình huống</th><th>Đầu ra cần đạt</th></tr></thead><tbody><tr><td>1 · Nhận SR</td><td>Dùng DEMO-01 ở trên.</td><td>Không khẳng định đã hết lỗi; hỏi phạm vi LAN/Wi-Fi, kiểm voucher; không hứa lịch KTV.</td></tr><tr><td>2 · Có dữ kiện mới</td><td>“DEMO-01, 06/10 09:00: KH xác nhận LAN ổn, 2 thiết bị Wi-Fi đều chập chờn.”</td><td>Ghép đúng case, không hỏi lại LAN; tập trung kiểm Wi-Fi nhưng chưa kết luận nguyên nhân.</td></tr><tr><td>3 · Có mâu thuẫn</td><td>“Note nội bộ ghi KH đồng ý đóng SR, chưa có kết quả cuộc gọi xác nhận.”</td><td>Giữ cả hai thông tin, hỏi xác minh; không tự đóng SR hoặc ghi KH hài lòng.</td></tr><tr><td>4 · Sau cuộc gọi</td><td>“KH còn lỗi, đồng ý kiểm tra tiếp; lịch 07/10 14:00 đã được điều phối xác nhận.”</td><td>Ghi đúng kết quả/lịch hẹn, cập nhật bước tiếp theo; chỉ dùng thời gian đã xác nhận.</td></tr><tr><td>5 · Đổi case / chat</td><td>Gửi SR khác không có mã; hoặc dùng /BANGIAO rồi dán chat mới.</td><td>Hỏi phân biệt case, không trộn hồ sơ; chat mới dùng dữ liệu bàn giao và kiểm trạng thái hiện tại.</td></tr></tbody></table></div><p class="setup-note">Bảng là kịch bản nghiệm thu để nhân viên chạy thử; không phải kết quả đã kiểm thử trực tiếp trên một dịch vụ AI/CRM.</p></div></details><div class="callout"><b>Nhân rộng cho DVKH:</b> dùng chung prompt nền và mẫu hồ sơ; mỗi đơn vị bổ sung tài liệu chính sách còn hiệu lực, luồng chuyển cấp và người theo dõi. Thử case mẫu → người phụ trách duyệt lời thoại → dùng trong ca làm → ghi nhận lỗi để chỉnh prompt. Theo dõi thời gian chuẩn bị, phần phải sửa và phản hồi của nhân viên; không mặc định hiệu quả đã được chứng minh.</div></section></div><footer class="footer"><span>Data2Sheet SG10 · Đề tài ứng dụng AI trong báo cáo nghiệp vụ</span><span><span class="signature-credit">Designed with <span class="signature-heart" aria-label="love">♥</span> by <b>NamHH</b> · FPT Telecom SG10</span></span></footer></main><button class="backtop" aria-label="Về đầu trang" title="Về đầu trang">↑</button><div class="toast" role="status" aria-live="polite"></div>
 <script>
 
 const VIEW_GROUPS={
@@ -717,11 +727,14 @@ function currentView(){
  if(VIEW_GROUPS[p]) return p;
  return 'intro';
 }
-function applyView(){
- const v=currentView();
+function syncViewState(v){
  document.body.dataset.view=v;
  document.body.classList.add('view-ready');
- document.querySelectorAll('[data-view-link]').forEach(a=>{a.classList.remove('active');const on=a.dataset.viewLink===v;if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+ document.querySelectorAll('[data-view-link]').forEach(a=>{
+   const on=a.dataset.viewLink===v;
+   a.classList.remove('active');
+   if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+ });
  for(const [view,g] of Object.entries(VIEW_GROUPS)){
    g.ids.forEach((id,idx)=>{
      const el=document.getElementById(id); if(!el)return;
@@ -729,13 +742,55 @@ function applyView(){
    });
  }
 }
+function applyView(){syncViewState(currentView())}
+function viewUrl(view,hash){
+ const base=location.pathname;
+ return base+'?view='+encodeURIComponent(view)+(hash||'');
+}
+function scrollToViewTarget(hash,instant=false){
+ const target=hash?document.getElementById(hash.replace(/^#/,'')):null;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const behavior=instant||reduce?'auto':'smooth';
+ if(target){revealTarget(target);target.scrollIntoView({block:'start',behavior})}
+ else window.scrollTo({top:0,behavior});
+}
+function switchView(view,hash='',push=true){
+ if(!VIEW_GROUPS[view])return;
+ const update=()=>{
+   syncViewState(view);
+   // Reset old-page scroll before revealing a view with a different height.
+   window.scrollTo({top:0,behavior:'auto'});
+ };
+ if(document.startViewTransition&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+   const transition=document.startViewTransition(update);
+   transition.finished.then(()=>requestAnimationFrame(()=>scrollToViewTarget(hash,false))).catch(()=>scrollToViewTarget(hash,false));
+ }else{
+   update();
+   const visible=VIEW_GROUPS[view].ids.map(id=>document.getElementById(id)).filter(Boolean);
+   visible.forEach(el=>el.animate?.([{opacity:.55,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:240,easing:'cubic-bezier(.2,.7,.2,1)'}));
+   requestAnimationFrame(()=>scrollToViewTarget(hash,false));
+ }
+ if(push)history.pushState({view},'',viewUrl(view,hash));
+ progress();
+}
 applyView();
-document.querySelectorAll('[data-view-link]').forEach(a=>a.addEventListener('click',()=>{
- const v=a.dataset.viewLink;
- if(VIEW_GROUPS[v]){document.body.dataset.view=v;document.querySelectorAll('[data-view-link]').forEach(x=>{if(x===a)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')})}
+
+// Intercept every internal link that carries ?view=... so GitHub Pages never reloads.
+document.querySelectorAll('a[href*="?view="]').forEach(a=>a.addEventListener('click',event=>{
+ if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+ const url=new URL(a.href,location.href);
+ if(url.origin!==location.origin||url.pathname!==location.pathname)return;
+ const view=url.searchParams.get('view');
+ if(!VIEW_GROUPS[view])return;
+ event.preventDefault();
+ switchView(view,url.hash||'',true);
 }));
 
-window.addEventListener('popstate',applyView);
+window.addEventListener('popstate',()=>{
+ applyView();
+ requestAnimationFrame(()=>scrollToViewTarget(location.hash||'',true));
+ progress();
+});
 
 function practicalPromptBuilder(pre){
  const prompt=pre.closest('.prompt'); if(!prompt||prompt.querySelector('.prompt-vars'))return;
@@ -777,14 +832,12 @@ document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('clic
 const navLinks=[...document.querySelectorAll('.view-nav a')];
 function hashKey(hash){try{return decodeURIComponent((hash||'').replace(/^#/,''))}catch(e){return ''}}
 function revealTarget(target){for(let parent=target?.parentElement;parent;parent=parent.parentElement){if(parent.tagName==='DETAILS')parent.open=true}}
-function progress(){document.querySelector('.backtop').classList.toggle('visible',window.scrollY>650);const max=document.documentElement.scrollHeight-window.innerHeight;document.querySelector('.progress').style.width=(max>0?100*window.scrollY/max:0)+'%'}
+function progress(){document.querySelector('.backtop').classList.toggle('visible',window.scrollY>650);const max=document.documentElement.scrollHeight-window.innerHeight;const ratio=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;document.querySelector('.progress').style.transform='scaleX('+ratio+')'}
 window.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);progress();
 function navigateHash(){const target=document.getElementById(hashKey(location.hash));if(target){revealTarget(target);target.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}}
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',event=>{const target=document.getElementById(hashKey(a.getAttribute('href')));if(!target)return;event.preventDefault();if(a.dataset.viewLink){location.href=a.href;return} if(location.hash!==a.getAttribute('href'))history.pushState(null,'',a.getAttribute('href'));navigateHash()}));window.addEventListener('hashchange',navigateHash);window.addEventListener('popstate',navigateHash);if(location.hash)requestAnimationFrame(navigateHash);
 
 document.querySelector('.backtop').addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
-let printDetails=[];window.addEventListener('beforeprint',()=>{printDetails=[...document.querySelectorAll('details')].filter(d=>!d.open);printDetails.forEach(d=>d.open=true)});window.addEventListener('afterprint',()=>printDetails.forEach(d=>d.open=false));
-
 // Content stays visible if scripting or motion is unavailable.
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
 if(!reducedMotion.matches){
