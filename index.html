@@ -702,7 +702,7 @@ function practicalPromptBuilder(pre){
  const head=prompt.querySelector('.prompt-head'); if(head) head.insertAdjacentElement('afterend',box); else prompt.prepend(box);
  const render=()=>{
    let prefix='';
-   const source=fields[0].value.trim(), custom=fields[1].value.trim();
+   const source=fields[0]?.value.trim()||'', custom=fields[1]?.value.trim()||'';
    if(source) prefix+='ĐẦU VÀO NGƯỜI DÙNG:\n'+source+'\n\n';
    if(custom) prefix+='YÊU CẦU / TÙY CHỈNH:\n'+custom+'\n\n';
    pre.textContent=prefix+original;
