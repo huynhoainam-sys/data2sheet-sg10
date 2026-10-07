@@ -187,11 +187,7 @@ body[data-view="advanced"] #dashboard+#cskh{margin-top:12px}
 </div><div class="content-group" id="products"><nav class="local-nav" aria-label="Đi nhanh trong phần sản phẩm"><a href="#samples">Tổng quan</a><a href="#case-ibb">Kinh doanh</a><a href="#case-hcm">Theo đơn vị</a><a href="#case-pkt">Theo nhân sự</a><a href="#case-gt">Tiến độ</a></nav><div class="group-cap"><div><span>02</span><strong>Sản phẩm thực tế</strong></div><p>Xem sản phẩm, dữ liệu đầu vào, kết quả và cách tái tạo</p></div><div class="usage-four product-usage"><div><b>Mục đích</b><span>Xem sản phẩm thật đã áp dụng</span></div><div><b>Đầu vào</b><span>Dữ liệu nghiệp vụ + map/rule liên quan</span></div><div><b>Kết quả</b><span>Báo cáo, KPI, bộ lọc và link kiểm chứng</span></div><div><b>Bước tiếp theo</b><span>Tham khảo prompt mẫu hoặc sang tab 03 để áp dụng</span></div></div><section class="section" id="samples"><div class="section-title"><span class="section-num">02</span><div><h2>Sản phẩm ứng dụng thực tế</h2><p>Bốn sản phẩm tại SG10 minh họa cùng mô hình giải pháp trên các bài toán khác nhau: bán hàng, PTTB, quản lý nhân sự kỹ thuật và khu vực giải tỏa. Mỗi sản phẩm tập trung vào bài toán, dữ liệu, đầu ra và link kiểm chứng. Prompt triển khai nằm ngay trong thẻ sản phẩm để dùng lại trên nguồn khác; thư viện prompt vận hành được gom riêng ở phần 03.</p></div></div><details class="follow source-requirements"><summary>Cần những dữ liệu nào để làm lại từ đầu? <span>＋</span></summary><div class="quick-body"><div class="table-scroll"><table class="guide-table"><thead><tr><th>Sản phẩm</th><th>Data thô</th><th>Map / rule / nguồn bổ sung</th><th>Đầu ra</th></tr></thead><tbody><tr><td>IBB</td><td>MasterReport: HĐ, Ngày Online, ACC, CN quản lý/bán, Phòng; data RM.</td><td>ACC → CN/Phòng/Vùng; key HĐ ghép RM; ngày RM và tuổi thuê bao; quyền nguồn IMPORTRANGE.</td><td>Sản lượng, RM, tỷ lệ; chọn tiêu chí và sort tháng.</td></tr><tr><td>PTTB Dịch Thuật</td><td>Master theo kỳ: HĐ, CN Bán, Phòng, Ngày Online, Ngày hủy, trạng thái.</td><td>Kế hoạch theo SGx, số nhân sự nếu tính PTTB/NV; quy tắc loại hủy và cùng kỳ.</td><td>Trong ngày/lũy kế, %HT, rank, tăng trưởng.</td></tr><tr><td>PTTB PKT10</td><td>Dữ liệu nghiệp vụ chính và dữ liệu bổ sung.</td><td>Dữ liệu nhân sự/map, lịch sử hiệu lực, rule và kế hoạch; khóa nghiệp vụ → nhân sự/đơn vị.</td><td>Báo cáo kỳ, lũy kế và dashboard.</td></tr><tr><td>Giải tỏa</td><td>Ba nguồn khu vực: HĐ, nhân sự, CDD/NKN/RM và tháng sự kiện.</td><td>Khu vực → ĐT/KTV; số ảnh hưởng làm mẫu số; quy tắc đếm sự kiện/lịch sử.</td><td>Theo khu vực/đội, tháng, lũy kế và tỷ lệ.</td></tr></tbody></table></div><p class="setup-note">Data giao dịch không đủ để suy ra kế hoạch, nhân sự lịch sử hoặc tuổi thuê bao. Thiếu nguồn nào thì hỏi đúng nguồn đó và nêu KPI chưa thể hoàn thành; không tự đặt số.</p></div></details><div class="product-overview"><a href="#case-ibb" class="overview ibb"><span class="overview-num">01</span><h3>IBB bán vào SG10</h3><p>Sản lượng &amp; rời mạng sớm</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-hcm" class="overview hcm"><span class="overview-num">02</span><h3>PTTB Dịch Thuật HCM</h3><p>Online &amp; so sánh giữa SGx</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-pkt" class="overview pkt"><span class="overview-num">03</span><h3>PTTB PKT10</h3><p>KTV, tổng đội &amp; Dashboard</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a><a href="#case-gt" class="overview gt"><span class="overview-num">04</span><h3>Khu vực giải tỏa</h3><p>CDD/RM/NKN &amp; lũy kế</p><span class="overview-action">Xem sản phẩm &amp; cách làm →</span></a></div><div class="design-chain"><b>Cách dùng prompt thiết kế:</b> AI đọc nguồn và map → nêu rule còn thiếu → bạn bổ sung/chốt rule → AI xây công thức và báo cáo → QA. Có Dashboard trong Sheet thì cùng dùng lớp tính; chưa có nguồn cho KPI nào thì để phần đó cần xác nhận.</div><p class="setup-note">Mở Sheet để xem sản phẩm; prompt trong từng sản phẩm là <b>mẫu tham khảo</b> về cách phân tích → thiết kế → tạo → QA, không cần nhập thông tin trước khi sao chép. Khi muốn áp dụng vào dữ liệu của mình, chuyển sang tab <b>03 · Thực hành &amp; Prompt</b>.</p><article class="case" id="case-ibb"><div class="case-head"><div><span class="label">01 / KINH DOANH · IBB &amp; RỜI MẠNG</span><h3>Thống Kê IBB Bán Vào SG10</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1ctujwobCNm8c9YjFQs2ahg5AwvgsqdbowGXOo4cx-hA/edit?gid=348465388" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-ibb">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần xem nhân viên nào bán vào địa bàn SG10, sản lượng từng tháng và tỷ lệ rời mạng sớm.</p></div><div><span class="minor">KẾT QUẢ</span><p>Sản lượng tháng/năm; RM theo tiêu chí; tỷ lệ; phân cấp Vùng → Chi nhánh bán → Phòng → ACC bán.</p></div></div>
 <div class="flow">Data_MT + RM → MAP_ACC_NVB → Báo Cáo</div><p class="method"><b>Cách làm với AI:</b> AI đọc nguồn và phạm vi địa bàn, hỗ trợ sinh map ACC, viết công thức tổng hợp, bổ sung dropdown và sort. Người dùng kiểm tra tổng và tinh chỉnh bằng hội thoại.</p>
-<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-ibb">Sao chép</button></div><pre id="build-ibb">NGUỒN DỮ LIỆU / LINK SHEET: [NGUỒN DỮ LIỆU / LINK SHEET]
-MỤC TIÊU / KPI: [MỤC TIÊU / KPI]
-RULE / ĐIỀU KIỆN ĐẶC THÙ: [RULE / ĐIỀU KIỆN ĐẶC THÙ]
-
-PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO KINH DOANH
+<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-ibb">Sao chép</button></div><pre id="build-ibb">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO KINH DOANH
 
 Đầu vào: dữ liệu/file/Google Sheet được cung cấp trong cuộc chat.
 
@@ -223,11 +219,7 @@ PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO KINH DOANH
 - Trả: cấu trúc đề xuất, rule đã chốt, phần đã tạo, bảng QA và điểm còn cần xác nhận.</pre></div></details></article><article class="case" id="case-hcm"><div class="case-head"><div><span class="label">02 / KINH · DỊCH · THUẬT · KV HCM</span><h3>Báo cáo PTTB Dịch Thuật KVHCM</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1__JzPWh2zJ4-gNIINJOKDtCF9VySinFSVxcvZvkOKDk/edit?gid=46261680" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-hcm">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần so sánh Online của phòng Kỹ thuật và CUS giữa các SGx, đúng ngày và cùng kỳ.</p></div><div><span class="minor">KẾT QUẢ</span><p>Trong ngày; lũy kế; kế hoạch; % hoàn thành; rank; cùng kỳ; tăng trưởng theo SGx.</p></div></div>
 <div class="flow">Master_T9 / Master_T10 → SS Dịch thuật</div><p class="method"><b>Cách làm với AI:</b> AI xác định cột Online, chi nhánh bán và phòng; hỗ trợ công thức đếm HĐ, so sánh cùng kỳ và truy danh sách HĐ khi số liệu lệch.</p>
-<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-hcm">Sao chép</button></div><pre id="build-hcm">NGUỒN DỮ LIỆU / LINK SHEET: [NGUỒN DỮ LIỆU / LINK SHEET]
-MỤC TIÊU / KPI: [MỤC TIÊU / KPI]
-RULE / ĐIỀU KIỆN ĐẶC THÙ: [RULE / ĐIỀU KIỆN ĐẶC THÙ]
-
-PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO SẢN LƯỢNG THEO ĐƠN VỊ
+<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-hcm">Sao chép</button></div><pre id="build-hcm">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO SẢN LƯỢNG THEO ĐƠN VỊ
 
 Đầu vào: dữ liệu/file/Google Sheet được cung cấp.
 
@@ -256,11 +248,7 @@ QA
 - Trả cấu trúc, công thức/rule chính, phần đã tạo và bảng QA.</pre></div></details></article><article class="case" id="case-pkt"><div class="case-head"><div><span class="label">03 / KỸ THUẬT · TEAM &amp; KTV</span><h3>PKT10 – PTTB 2026 – Master Report</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1bV0TV45trGHkpNlCUvQi1Flokr7tQFvAoFvfUqaOE3k/edit?gid=1971707634" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-pkt">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần theo dõi kế hoạch, thực hiện và HĐ chờ Online của từng KTV, tổng đội và toàn phòng.</p></div><div><span class="minor">KẾT QUẢ</span><p>Kế hoạch; Online; %HT; KPDV; HĐ chờ Online; tổng Đội trưởng; lũy kế và Dashboard.</p></div></div>
 <div class="flow">Dữ liệu nghiệp vụ + Nhân sự → Báo cáo kỳ → Lũy kế / Dashboard</div><p class="method"><b>Cách làm với AI:</b> AI đọc dữ liệu và quy tắc nhân sự, hỗ trợ map ACC bán về KTV, đồng bộ báo cáo tháng với lũy kế và Dashboard, rà nhân sự thiếu map.</p>
-<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-pkt">Sao chép</button></div><pre id="build-pkt">NGUỒN DỮ LIỆU / LINK SHEET: [NGUỒN DỮ LIỆU / LINK SHEET]
-MỤC TIÊU / KPI: [MỤC TIÊU / KPI]
-RULE / ĐIỀU KIỆN ĐẶC THÙ: [RULE / ĐIỀU KIỆN ĐẶC THÙ]
-
-PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO NHÂN SỰ
+<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-pkt">Sao chép</button></div><pre id="build-pkt">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO NHÂN SỰ
 
 Đầu vào: dữ liệu nghiệp vụ, dữ liệu nhân sự/map, kế hoạch và các file liên quan được cung cấp.
 
@@ -289,11 +277,7 @@ QA
 - Trả cấu trúc dữ liệu, rule, báo cáo đã tạo, bảng QA và danh sách điểm cần bổ sung.</pre></div></details></article><article class="case" id="case-gt"><div class="case-head"><div><span class="label">04 / DVKH &amp; KỸ THUẬT · ĐỊA BÀN</span><h3>Tổng hợp khu vực giải tỏa SG10</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1gH6WM5XAEPMzFipLi6Q59GCPosN1Gcj18XrxpHpPwbc/edit?gid=1072723482" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-gt">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần theo dõi khách hàng bị ảnh hưởng và kết quả CDD, RM, NKN theo khu vực, Đội trưởng.</p></div><div><span class="minor">KẾT QUẢ</span><p>Số ảnh hưởng; CDD/RM/NKN theo tháng; lũy kế; %RM và %CDD; tổng theo khu vực/Đội trưởng.</p></div></div>
 <div class="flow">3 tab khu vực → Theo doi số liệu → Tổng SG10</div><p class="method"><b>Cách làm với AI:</b> AI đọc các cột sự kiện và tình trạng, hỗ trợ tổng hợp theo tháng và khu vực, tính tỷ lệ đúng mẫu số và phát hiện HĐ thiếu thông tin.</p>
-<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-gt">Sao chép</button></div><pre id="build-gt">NGUỒN DỮ LIỆU / LINK SHEET: [NGUỒN DỮ LIỆU / LINK SHEET]
-MỤC TIÊU / KPI: [MỤC TIÊU / KPI]
-RULE / ĐIỀU KIỆN ĐẶC THÙ: [RULE / ĐIỀU KIỆN ĐẶC THÙ]
-
-PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO DÕI TIẾN ĐỘ / GIẢI TỎA
+<details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Thực hành trên bản sao; giữ nguyên sản phẩm gốc</span></div><button class="copy" data-copy="build-gt">Sao chép</button></div><pre id="build-gt">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO DÕI TIẾN ĐỘ / GIẢI TỎA
 
 Đầu vào: các bảng dữ liệu khu vực, hợp đồng/case, nhân sự và mốc sự kiện được cung cấp.
 
@@ -320,7 +304,7 @@ QA
 - Rà thiếu nhân sự, thiếu tháng sự kiện, trùng khóa và case chưa xác định.
 - Trả cấu trúc, rule, phần đã tạo, bảng QA và danh sách ngoại lệ.</pre></div></details></article></section>
 <section class="section" id="impact"><div class="section-title"><span class="section-num">03</span><div><h2>Đánh giá hiệu quả &amp; lộ trình nhân rộng</h2><p>Sản phẩm minh họa khả năng triển khai; hiệu quả vận hành cần được đo trên cùng bài toán và cùng kỳ dữ liệu.</p></div></div><div class="replicate-grid"><article><h3>Đổi mới trong cách làm</h3><p>Yêu cầu báo cáo được diễn đạt bằng nghiệp vụ và hoàn thiện qua hội thoại. MAP, rule và QA trở thành phần của giải pháp, giúp số liệu có căn cứ và có thể truy lại khi phát sinh chênh lệch.</p></article><article><h3>Đo hiệu quả thực tế</h3><p>So sánh thời gian tạo/cập nhật báo cáo, số thao tác thủ công, chênh lệch sau QA và khả năng người khác tự vận hành. Chỉ công bố mức tiết kiệm khi có số liệu trước–sau được xác nhận.</p></article><article><h3>Nhân rộng có kiểm soát</h3><p>Chọn một báo cáo ưu tiên ở mỗi bộ phận → chuẩn hóa nguồn và rule → thử trên bản sao → nghiệm thu một kỳ → bàn giao bộ tài liệu → theo dõi và cải tiến qua các kỳ tiếp theo.</p></article></div><div class="callout"><b>Điều kiện triển khai:</b> nguồn có thể truy cập, nghiệp vụ đủ rõ, quyền thao tác phù hợp và người chịu trách nhiệm QA. Dashboard Apps Script và AI CSKH là hai hướng mở rộng; cùng tuân thủ nguyên tắc kiểm chứng đầu vào và duyệt kết quả.</div></section></div>
-<div class="content-group" id="guide"><nav class="local-nav" aria-label="Đi nhanh trong phần prompt"><a href="#setup">Kết nối AI</a><a href="#workflow">Quy trình</a><a href="#practice">Prompt chung</a><a href="#qa">QA</a><a href="#daily-prompts">Thư viện prompt</a></nav><div class="group-cap"><div><span>03</span><strong>Prompt &amp; hướng dẫn</strong></div><p>Kết nối AI với dữ liệu → quy trình → prompt dùng ngay → QA</p></div><div class="usage-four prompt-usage"><div><b>Mục đích</b><span>Tự áp dụng AI vào dữ liệu của người xem</span></div><div><b>Đầu vào</b><span>1–2 ô: dữ liệu/link + yêu cầu</span></div><div><b>Kết quả</b><span>Prompt đã điền, có thể copy dùng ngay</span></div><div><b>Bước tiếp theo</b><span>Kiểm kết quả → bổ sung rule → QA</span></div></div><section class="section tab-intro" id="guide-start"><div class="section-title"><span class="section-num">04</span><div><h2>Phụ lục thực hành: triển khai giải pháp</h2><p>Tài liệu chuyển giao đi kèm đề tài: kết nối nguồn, quy trình thực hiện, prompt và cách đối soát để các bộ phận áp dụng vào công việc.</p></div></div><details class="follow compact-guide"><summary>Chuẩn bị kết nối &amp; quy trình làm việc<span aria-hidden="true">＋</span></summary><div class="quick-body"><section class="section" id="setup"><div class="section-title"><span class="section-num">•</span><div><h2>Kết nối AI với Google Sheet</h2><p>Dùng được với ChatGPT, Gemini hoặc công cụ AI có khả năng đọc file/Google Drive. Nguyên tắc là xác nhận AI thực sự đọc được dữ liệu trước khi yêu cầu phân tích hoặc sửa.</p></div></div><div class="connector-grid"><article class="connector-card"><span class="connector-badge">ChatGPT</span><h3>Kết nối Google Drive / Sheet</h3><p>Kết nối Google Drive khi tài khoản hỗ trợ, gửi link Sheet trong chat và yêu cầu AI xác nhận đúng file, cấu trúc dữ liệu và quyền hiện tại là đọc hay ghi.</p></article><article class="connector-card"><span class="connector-badge">Gemini / AI khác</span><h3>Mở link hoặc đính kèm dữ liệu</h3><p>Nếu công cụ không đọc trực tiếp được link, hãy đính kèm XLSX/CSV hoặc copy vùng dữ liệu cần xử lý. Không giả định “có link” nghĩa là AI đã truy cập được.</p></article><article class="connector-card"><span class="connector-badge">An toàn</span><h3>Làm trên bản sao khi cần ghi</h3><p>Giữ raw data, chốt KPI/rule trước khi sửa và luôn QA lại nguồn → chi tiết → tổng sau thay đổi.</p></article></div><div class="connection-note"><b>Note dùng chung:</b> prompt trong trang không phụ thuộc tên tab cố định. Hãy để AI đọc header/nội dung thực tế, xác định khóa, trường ngày và rule trước khi tạo báo cáo.</div><div class="prompt"><div class="prompt-head"><div><h4>Prompt kiểm tra kết nối</h4><span>Prompt thực hành · chỉ cần 1 ô đầu vào</span></div><button class="copy" data-copy="connection">Sao chép</button></div><pre id="connection">Đọc dữ liệu đầu vào tôi cung cấp trong cuộc chat.
+<div class="content-group" id="guide"><nav class="local-nav" aria-label="Đi nhanh trong phần prompt"><a href="#setup">Kết nối AI</a><a href="#workflow">Quy trình</a><a href="#practice">Prompt chung</a><a href="#qa">QA</a><a href="#daily-prompts">Thư viện prompt</a></nav><div class="group-cap"><div><span>03</span><strong>Prompt &amp; hướng dẫn</strong></div><p>Kết nối AI với dữ liệu → quy trình → prompt dùng ngay → QA</p></div><div class="usage-four prompt-usage"><div><b>Mục đích</b><span>Tự áp dụng AI vào dữ liệu của người xem</span></div><div><b>Đầu vào</b><span>1–2 ô: dữ liệu/link + yêu cầu</span></div><div><b>Kết quả</b><span>Prompt đã điền, có thể copy dùng ngay</span></div><div><b>Bước tiếp theo</b><span>Kiểm kết quả → bổ sung rule → QA</span></div></div><section class="section tab-intro" id="guide-start"><div class="section-title"><span class="section-num">04</span><div><h2>Phụ lục thực hành: triển khai giải pháp</h2><p>Tài liệu chuyển giao đi kèm đề tài: kết nối nguồn, quy trình thực hiện, prompt và cách đối soát để các bộ phận áp dụng vào công việc.</p></div></div><details class="follow compact-guide"><summary>Chuẩn bị kết nối &amp; quy trình làm việc<span aria-hidden="true">＋</span></summary><div class="quick-body"><section class="section" id="setup"><div class="section-title"><span class="section-num">•</span><div><h2>Kết nối AI với Google Sheet</h2><p>Dùng được với ChatGPT, Gemini hoặc công cụ AI có khả năng đọc file/Google Drive. Nguyên tắc là xác nhận AI thực sự đọc được dữ liệu trước khi yêu cầu phân tích hoặc sửa.</p></div></div><div class="connector-grid"><article class="connector-card"><span class="connector-badge">ChatGPT</span><h3>Kết nối Google Drive / Sheet</h3><p>Kết nối Google Drive khi tài khoản hỗ trợ, gửi link Sheet trong chat và yêu cầu AI xác nhận đúng file, cấu trúc dữ liệu và quyền hiện tại là đọc hay ghi.</p></article><article class="connector-card"><span class="connector-badge">Gemini / AI khác</span><h3>Mở link hoặc đính kèm dữ liệu</h3><p>Nếu công cụ không đọc trực tiếp được link, hãy đính kèm XLSX/CSV hoặc copy vùng dữ liệu cần xử lý. Không giả định “có link” nghĩa là AI đã truy cập được.</p></article><article class="connector-card"><span class="connector-badge">An toàn</span><h3>Làm trên bản sao khi cần ghi</h3><p>Giữ raw data, chốt KPI/rule trước khi sửa và luôn QA lại nguồn → chi tiết → tổng sau thay đổi.</p></article></div><div class="connection-note"><b>Note dùng chung:</b> prompt trong trang không phụ thuộc tên tab cố định. Hãy để AI đọc header/nội dung thực tế, xác định khóa, trường ngày và rule trước khi tạo báo cáo.</div><div class="prompt"><div class="prompt-head"><div><h4>Prompt kiểm tra kết nối</h4><span>Prompt thực hành · tối đa 2 ô đầu vào</span></div><button class="copy" data-copy="connection">Sao chép</button></div><pre id="connection">Đọc dữ liệu đầu vào tôi cung cấp trong cuộc chat.
 
 MỤC ĐÍCH
 - Xác nhận AI có truy cập đúng nguồn trước khi làm báo cáo.
@@ -377,49 +361,146 @@ KẾT QUẢ CẦN TRẢ
 - Không phụ thuộc tên tab/vùng cố định; bám theo cấu trúc thực tế.
 - Trả: Chỉ số | Nguồn | Báo cáo | Chênh lệch | Kết luận.
 - Nếu lệch, nêu hợp đồng/case tạo chênh lệch và vị trí liên quan.
-- Chưa đủ dữ liệu thì ghi “Cần kiểm tra”, không kết luận OK.</pre></div></div></details><div class="qa-outcomes"><div><span class="status pass">Đạt</span><p>Khớp nguồn, đúng rule, dùng được.</p></div><div><span class="status pending">Cần kiểm tra</span><p>Thiếu dữ liệu/rule; nêu phần còn thiếu.</p></div><div><span class="status fail">Cần sửa</span><p>Lệch số/chức năng; sửa và kiểm lại.</p></div></div></section></div><div class="content-group" id="prompts"><section class="section" id="daily-prompts"><div class="section-title"><span class="section-num">07</span><div><h2>Phụ lục: prompt theo tình huống nghiệp vụ</h2><p>Chọn đúng việc cần làm, điền thông tin đầu vào rồi sao chép. Prompt được thiết kế để dùng lại trên nhiều nguồn, không phụ thuộc một link hoặc tên tab cố định.</p></div></div><div class="library-index"><a href="#lib-data"><b>01 · Dữ liệu</b><span>Cập nhật, gộp, map</span></a><a href="#lib-comment"><b>02 · Nhận xét</b><span>Công thức hoặc AI</span></a><a href="#lib-upgrade"><b>03 · Nâng cấp</b><span>KPI, kỳ, chi tiết</span></a><a href="#lib-fix"><b>04 · Kiểm lỗi</b><span>Truy lệch và sửa</span></a></div><p class="setup-note">Thay [ngoặc] trước khi gửi. “Link trên” dùng trong cùng cuộc chat đã cung cấp nguồn. Nếu AI chưa truy cập được Sheet, đính kèm file xuất và yêu cầu trả công thức/mã cùng vị trí dán.</p><article class="library-group" id="lib-data"><h3>01 · Cập nhật &amp; chuẩn hóa dữ liệu</h3><p>Một prompt cho ba chế độ; chọn rõ phạm vi và khóa ghép.</p><details class="follow prompt-fold"><summary><b>Cập nhật, gộp file &amp; map dữ liệu</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-data">Sao chép prompt</button></div><pre id="task-data">Cập nhật dữ liệu đính kèm vào [LINK SHEET], tab [TAB], kỳ [KỲ]. Chế độ: [THAY ĐÚNG KỲ / GHÉP PHÁT SINH / GỘP NHIỀU FILE]. Khóa của một dòng: [KHÓA]; cột được cập nhật: [CỘT].
-Đọc header và vùng đích trước; map cột theo tên, chuẩn hóa ngày/số, giữ HĐ/ACC dạng text. File đầy đủ mới được thay kỳ và dọn phần dư trong vùng đó; file phát sinh thì thêm/cập nhật theo khóa, ô trống không xóa dữ liệu cũ. Nhiều dòng cùng HĐ phải xác định mức chi tiết của từng dòng/lịch sử, không tự xóa trùng. Gộp nhiều file phải ghi tên file nguồn.
-Giữ cột công thức, các kỳ/tab ngoài phạm vi. Ghép nhân sự bằng ACC/mã NV và ngày hiệu lực từ nguồn xác nhận; thiếu/mâu thuẫn map thì tách danh sách, không tự gán đội. Sau ghi, so dòng/khóa/tổng từng file → nguồn → báo cáo cùng kỳ; trả vùng sửa, thêm/cập nhật/chưa map và chênh lệch.</pre></div></div></details></article><article class="library-group" id="lib-comment"><h3>02 · Tạo nhận xét báo cáo</h3><p>Công thức tự đổi theo Sheet; nhận xét AI cần chạy lại khi nguồn đổi.</p><details class="follow prompt-fold"><summary><b>Nhận xét tự cập nhật bằng công thức</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-formula">Sao chép prompt</button></div><pre id="task-comment-formula">Trên [LINK SHEET], tạo nhận xét động bằng công thức tại [TAB!VÙNG], lấy KPI từ báo cáo đã QA: thực hiện/kế hoạch, %HT, so cùng kỳ, nhóm nổi bật. Viết 3 câu ngắn có số liệu; đổi data/kỳ phải tự đổi. Giữ rule; xử lý mẫu số 0, đồng hạng, kỳ chưa có data; không suy đoán nguyên nhân. Thử hai kỳ có data và kỳ trống; trả ô/công thức và kết quả đối soát.</pre></div></div></details><details class="follow prompt-fold"><summary><b>Nhận xét phân tích bằng AI</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-ai">Sao chép prompt</button></div><pre id="task-comment-ai">Đọc báo cáo [LINK SHEET] cho [KỲ/PHẠM VI], kiểm KPI trước. Viết 3–5 ý có số liệu: kết quả, chênh lệch kế hoạch/cùng kỳ, nhóm nổi bật, ngoại lệ và việc ưu tiên. Tách dữ kiện với giả thuyết; chưa có bằng chứng thì không gán nguyên nhân. Ghi vào [VÙNG] kèm kỳ, nguồn, thời điểm phân tích. Đây là nhận xét tại lần chạy này; nguồn đổi cần chạy lại. Trả bản nhận xét và phần còn cần kiểm tra.</pre></div></div></details></article><article class="library-group" id="lib-upgrade"><h3>03 · Nâng cấp báo cáo</h3><p>Thêm KPI, đổi kỳ hoặc truy chi tiết theo một bộ rule.</p><details class="follow prompt-fold"><summary><b>Thêm KPI, kỳ chọn &amp; chi tiết</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-upgrade">Sao chép prompt</button></div><pre id="task-upgrade">Nâng cấp báo cáo ở [LINK SHEET] với yêu cầu: [KPI MỚI + RULE / BỘ CHỌN KỲ / DANH SÁCH HĐ-CASE]. Đọc nguồn, map, rule và công thức hiện có; hỏi tối đa 3 điểm nghiệp vụ còn thiếu ảnh hưởng kết quả.
-Chốt nguồn, khóa/mỗi dòng, ngày, điều kiện tính/loại trừ, cấp tổng hợp và tử/mẫu. Dùng công thức theo nguồn; chỉ sửa vùng liên quan. Đổi kỳ phải đồng bộ tiêu đề/KPI/lũy kế/cùng kỳ, không vượt cuối tháng. Chi tiết dùng cùng bộ lọc và đơn vị đếm với tổng, không nhân dòng khi nối map. Giữ KPI cũ và raw. Kiểm kỳ có data/kỳ trống/mẫu số 0, tổng chi tiết → nhóm → toàn báo cáo; trả thay đổi, công thức và QA.</pre></div></div></details></article><article class="library-group" id="lib-fix"><h3>04 · Kiểm tra &amp; sửa lỗi</h3><p>Tìm đúng case lệch, sửa và đối soát lại.</p><details class="follow prompt-fold"><summary><b>Truy nguyên nhân &amp; sửa lỗi</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-fix">Sao chép prompt</button></div><pre id="task-fix">Báo cáo [LINK SHEET] có lỗi tại [TAB!Ô/VÙNG], kỳ [KỲ], hiện tượng [LỖI/SỐ LỆCH]. Truy nguồn → map theo thời điểm → công thức → báo cáo theo cùng rule/phạm vi. Liệt kê HĐ/case tạo chênh lệch và tham chiếu hỏng; không che lỗi bằng IFERROR=0 hoặc số cứng. Sửa đúng vùng liên quan, giữ raw/rule/KPI đang đúng. Trả nguyên nhân, vùng/công thức thay, bảng Nguồn | Báo cáo | Chênh lệch và kết quả kiểm lại; chưa đủ căn cứ ghi “Cần kiểm tra”.</pre></div></div></details></article><details class="follow"><summary>Tham khảo: cập nhật file vào 4 Sheet thực tế<span aria-hidden="true">＋</span></summary><div class="quick-body source-examples"><div class="prompt"><div class="prompt-head"><h4>Báo cáo kinh doanh · Dữ liệu nghiệp vụ</h4><button class="copy" data-copy="upload-ibb">Sao chép</button></div><pre id="upload-ibb">CẬP NHẬT DỮ LIỆU CHO BÁO CÁO HIỆN TẠI
+- Chưa đủ dữ liệu thì ghi “Cần kiểm tra”, không kết luận OK.</pre></div></div></details><div class="qa-outcomes"><div><span class="status pass">Đạt</span><p>Khớp nguồn, đúng rule, dùng được.</p></div><div><span class="status pending">Cần kiểm tra</span><p>Thiếu dữ liệu/rule; nêu phần còn thiếu.</p></div><div><span class="status fail">Cần sửa</span><p>Lệch số/chức năng; sửa và kiểm lại.</p></div></div></section></div><div class="content-group" id="prompts"><section class="section" id="daily-prompts"><div class="section-title"><span class="section-num">07</span><div><h2>Phụ lục: prompt theo tình huống nghiệp vụ</h2><p>Chọn đúng việc cần làm, điền thông tin đầu vào rồi sao chép. Prompt được thiết kế để dùng lại trên nhiều nguồn, không phụ thuộc một link hoặc tên tab cố định.</p></div></div><div class="library-index"><a href="#lib-data"><b>01 · Dữ liệu</b><span>Cập nhật, gộp, map</span></a><a href="#lib-comment"><b>02 · Nhận xét</b><span>Công thức hoặc AI</span></a><a href="#lib-upgrade"><b>03 · Nâng cấp</b><span>KPI, kỳ, chi tiết</span></a><a href="#lib-fix"><b>04 · Kiểm lỗi</b><span>Truy lệch và sửa</span></a></div><p class="setup-note">Thay [ngoặc] trước khi gửi. “Link trên” dùng trong cùng cuộc chat đã cung cấp nguồn. Nếu AI chưa truy cập được Sheet, đính kèm file xuất và yêu cầu trả công thức/mã cùng vị trí dán.</p><article class="library-group" id="lib-data"><h3>01 · Cập nhật &amp; chuẩn hóa dữ liệu</h3><p>Một prompt cho ba chế độ; chọn rõ phạm vi và khóa ghép.</p><details class="follow prompt-fold"><summary><b>Cập nhật, gộp file &amp; map dữ liệu</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-data">Sao chép prompt</button></div><pre id="task-data">CẬP NHẬT / GỘP / CHUẨN HÓA DỮ LIỆU
+
+MỤC ĐÍCH
+Cập nhật dữ liệu mới vào báo cáo hoặc hợp nhất nhiều nguồn mà không làm sai dữ liệu cũ.
+
+THỰC HIỆN
+- Đọc dữ liệu đầu vào và cấu trúc báo cáo hiện tại trước khi ghi.
+- Tự nhận diện vùng nguồn theo header/nội dung; không yêu cầu tên tab cố định.
+- Xác định khóa của một dòng, kỳ dữ liệu và mức chi tiết trước khi xóa trùng.
+- Map cột theo tên, chuẩn hóa ngày/số, giữ mã hợp đồng/ACC/mã nhân sự dạng text.
+- Nếu dữ liệu là bản đầy đủ của kỳ: thay đúng phạm vi kỳ và dọn phần dư trong vùng đó.
+- Nếu là dữ liệu phát sinh: thêm/cập nhật theo khóa; ô trống không tự xóa dữ liệu cũ.
+- Nếu gộp nhiều file: ghi nhận nguồn từng file và kiểm trùng giữa các file.
+- Không sửa raw data, map, rule hoặc kỳ ngoài phạm vi nếu không cần.
+- Thiếu/mâu thuẫn map thì tách danh sách cần kiểm tra, không tự gán.
+
+KẾT QUẢ CẦN TRẢ
+- Phạm vi đã cập nhật.
+- Số dòng thêm/cập nhật/bỏ qua.
+- Danh sách chưa map hoặc mâu thuẫn.
+- Đối soát nguồn → báo cáo sau cập nhật.
+
+BƯỚC TIẾP THEO
+- Chỉ sau khi QA khớp mới tiếp tục dùng báo cáo hoặc cập nhật kỳ tiếp theo.</pre></div></div></details></article><article class="library-group" id="lib-comment"><h3>02 · Tạo nhận xét báo cáo</h3><p>Công thức tự đổi theo Sheet; nhận xét AI cần chạy lại khi nguồn đổi.</p><details class="follow prompt-fold"><summary><b>Nhận xét tự cập nhật bằng công thức</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-formula">Sao chép prompt</button></div><pre id="task-comment-formula">TẠO NHẬN XÉT ĐỘNG BẰNG CÔNG THỨC
+
+MỤC ĐÍCH
+Tạo phần nhận xét tự đổi theo dữ liệu/kỳ của báo cáo.
+
+THỰC HIỆN
+- Đọc báo cáo đã QA và xác định các KPI chính.
+- Tạo 2–4 câu ngắn có số liệu: thực hiện/kế hoạch, % hoàn thành, so cùng kỳ và nhóm nổi bật nếu có.
+- Không suy đoán nguyên nhân khi dữ liệu không chứng minh.
+- Xử lý mẫu số 0, đồng hạng, kỳ chưa có dữ liệu và dữ liệu trống.
+- Chỉ sửa vùng nhận xét; không đổi rule/KPI đang đúng.
+- Nếu công cụ không ghi được Sheet, trả công thức hoàn chỉnh và vị trí đề xuất để dán.
+
+KẾT QUẢ CẦN TRẢ
+- Công thức hoặc phần đã tạo.
+- Ví dụ đầu ra.
+- Kết quả kiểm với kỳ có dữ liệu và kỳ trống.
+
+BƯỚC TIẾP THEO
+- Người dùng kiểm câu chữ và xác nhận trước khi đưa vào báo cáo chính thức.</pre></div></div></details><details class="follow prompt-fold"><summary><b>Nhận xét phân tích bằng AI</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-ai">Sao chép prompt</button></div><pre id="task-comment-ai">TẠO NHẬN XÉT BÁO CÁO BẰNG AI
+
+MỤC ĐÍCH
+Tóm tắt kết quả báo cáo thành nhận xét ngắn phục vụ điều hành.
+
+THỰC HIỆN
+- Đọc báo cáo và kiểm lại KPI trước khi nhận xét.
+- Viết 3–5 ý có số liệu: kết quả chính, chênh lệch kế hoạch/cùng kỳ, nhóm nổi bật, ngoại lệ và việc cần ưu tiên.
+- Tách dữ kiện khỏi giả thuyết; không tự gán nguyên nhân khi chưa có bằng chứng.
+- Nếu có kỳ/phạm vi trong yêu cầu của người dùng, chỉ phân tích đúng phạm vi đó.
+- Đây là nhận xét tại thời điểm chạy; khi nguồn thay đổi cần chạy lại.
+
+KẾT QUẢ CẦN TRẢ
+- Nhận xét ngắn, dễ dùng trong báo cáo.
+- Các điểm còn cần kiểm tra.
+- Căn cứ số liệu chính đã dùng.
+
+BƯỚC TIẾP THEO
+- Người dùng duyệt nội dung trước khi gửi hoặc dùng để điều hành.</pre></div></div></details></article><article class="library-group" id="lib-upgrade"><h3>03 · Nâng cấp báo cáo</h3><p>Thêm KPI, đổi kỳ hoặc truy chi tiết theo một bộ rule.</p><details class="follow prompt-fold"><summary><b>Thêm KPI, kỳ chọn &amp; chi tiết</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-upgrade">Sao chép prompt</button></div><pre id="task-upgrade">NÂNG CẤP BÁO CÁO HIỆN CÓ
+
+MỤC ĐÍCH
+Thêm KPI, bộ lọc, kỳ, chi tiết hoặc tính năng mới mà không phá cấu trúc đang đúng.
+
+THỰC HIỆN
+- Đọc nguồn, map, rule và công thức hiện có.
+- Hiểu yêu cầu nâng cấp từ phần đầu vào người dùng.
+- Hỏi tối đa 3 điểm nghiệp vụ còn thiếu có ảnh hưởng trực tiếp đến kết quả.
+- Chốt nguồn, khóa/mỗi dòng, trường ngày, điều kiện tính/loại trừ, cấp tổng hợp và tử/mẫu số.
+- Chỉ sửa vùng liên quan; giữ raw data, KPI và rule cũ đang đúng.
+- Nếu đổi kỳ, đồng bộ tiêu đề/KPI/lũy kế/cùng kỳ.
+- Chi tiết phải dùng cùng bộ lọc và đơn vị đếm với tổng.
+- Không để nối map làm nhân dòng.
+
+KẾT QUẢ CẦN TRẢ
+- Phần đã thay đổi.
+- Công thức/mã hoặc thao tác đã thực hiện.
+- Bảng QA trước/sau.
+
+BƯỚC TIẾP THEO
+- Kiểm một kỳ có dữ liệu, một kỳ trống và các case biên trước khi áp dụng rộng.</pre></div></div></details></article><article class="library-group" id="lib-fix"><h3>04 · Kiểm tra &amp; sửa lỗi</h3><p>Tìm đúng case lệch, sửa và đối soát lại.</p><details class="follow prompt-fold"><summary><b>Truy nguyên nhân &amp; sửa lỗi</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-fix">Sao chép prompt</button></div><pre id="task-fix">KIỂM TRA VÀ SỬA LỖI BÁO CÁO
+
+MỤC ĐÍCH
+Tìm đúng nguyên nhân khi số liệu lệch, công thức lỗi hoặc bộ lọc hoạt động sai.
+
+THỰC HIỆN
+- Đọc mô tả lỗi, dữ liệu nguồn và báo cáo hiện tại.
+- Truy theo chuỗi: nguồn → map theo thời điểm → rule → công thức → báo cáo.
+- Dùng cùng kỳ, cùng phạm vi và cùng đơn vị đếm khi đối soát.
+- Liệt kê hợp đồng/case tạo chênh lệch nếu có.
+- Không che lỗi bằng số cứng hoặc IFERROR trả 0.
+- Chỉ sửa phần liên quan; giữ raw data, rule và KPI đang đúng.
+
+KẾT QUẢ CẦN TRẢ
+- Nguyên nhân.
+- Vùng/công thức/mã đã sửa.
+- Bảng Nguồn | Báo cáo | Chênh lệch | Kết luận.
+- Các điểm còn “Cần kiểm tra” nếu chưa đủ căn cứ.
+
+BƯỚC TIẾP THEO
+- Chạy lại QA cùng kỳ và thêm một kỳ khác để xác nhận lỗi đã được xử lý.</pre></div></div></details></article><details class="follow"><summary>Tham khảo: cập nhật file vào 4 Sheet thực tế<span aria-hidden="true">＋</span></summary><div class="quick-body source-examples"><div class="prompt"><div class="prompt-head"><h4>Báo cáo kinh doanh · Dữ liệu nghiệp vụ</h4><button class="copy" data-copy="upload-ibb">Sao chép</button></div><pre id="upload-ibb">CẬP NHẬT DỮ LIỆU CHO BÁO CÁO HIỆN TẠI
 
 Đầu vào: file dữ liệu mới + workbook/báo cáo đang làm trong cuộc chat.
-Chế độ: [THAY TOÀN BỘ KỲ / GHÉP PHÁT SINH / CẬP NHẬT THEO KHÓA].
 
 - Đọc cấu trúc dữ liệu hiện tại trước khi ghi.
-- Tự nhận diện vùng nguồn phù hợp theo header và rule đang dùng; không yêu cầu tên tab cố định.
-- Xác định khóa dòng và mức chi tiết trước khi xóa trùng.
+- Tự nhận diện vùng nguồn phù hợp theo header và rule đang dùng.
+- Xác định khóa dòng, kỳ và mức chi tiết trước khi cập nhật.
+- Tự xác định từ yêu cầu người dùng đây là thay toàn bộ kỳ, ghép phát sinh hay cập nhật theo khóa; nếu chưa rõ thì hỏi trước khi ghi.
 - Giữ mã định danh dạng text, ngày/số đúng kiểu.
 - Nếu thay kỳ: chỉ thay đúng phạm vi kỳ và dọn phần dư trong vùng nguồn đó.
-- Nếu ghép: cập nhật theo khóa đã xác nhận; ô trống trong file mới không tự xóa dữ liệu cũ.
+- Nếu ghép: cập nhật theo khóa đã xác nhận; ô trống không tự xóa dữ liệu cũ.
 - Không sửa map, rule hoặc báo cáo đang đúng nếu không cần.
 - Sau cập nhật, đối soát số dòng, khóa duy nhất, kỳ mới nhất và các KPI chính; liệt kê dữ liệu thiếu map hoặc bất thường.</pre></div><div class="prompt"><div class="prompt-head"><h4>HCM · Master tháng</h4><button class="copy" data-copy="upload-hcm">Sao chép</button></div><pre id="upload-hcm">CẬP NHẬT DỮ LIỆU THEO KỲ
 
 Đầu vào: file dữ liệu mới + báo cáo hiện tại.
-Kỳ dữ liệu: [THÁNG/NĂM].
-Chế độ: [THAY TOÀN BỘ KỲ / GHÉP THEO KHÓA].
 
-- Đọc toàn bộ cấu trúc nguồn và tự xác định vùng dữ liệu của kỳ tương ứng.
+- Đọc toàn bộ cấu trúc nguồn và nhận diện kỳ từ dữ liệu hoặc yêu cầu người dùng.
 - Map cột theo header thực tế, không theo tên tab cố định.
 - Giữ trường ngày, trạng thái và mã hợp đồng đúng kiểu dữ liệu.
+- Xác định rõ đây là thay toàn bộ kỳ hay ghép theo khóa trước khi ghi.
 - Nếu thay kỳ, chỉ dọn phần dư trong đúng vùng nguồn của kỳ đó.
 - Nếu ghép, dùng khóa đã xác nhận và kiểm trường hợp một khóa có nhiều dòng hợp lệ.
 - Giữ nguồn kế hoạch và rule báo cáo.
 - Sau cập nhật, đối soát số hợp đồng/case, KPI trong ngày, lũy kế và các trường hợp bị loại; nếu lệch phải chỉ ra case cụ thể.</pre></div><div class="prompt"><div class="prompt-head"><h4>Báo cáo theo nhân sự · Dữ liệu nghiệp vụ</h4><button class="copy" data-copy="upload-pkt">Sao chép</button></div><pre id="upload-pkt">CẬP NHẬT DỮ LIỆU NGHIỆP VỤ CHO BÁO CÁO THEO NHÂN SỰ
 
 Đầu vào: file dữ liệu mới + workbook hiện tại.
-Chế độ: [THAY TOÀN BỘ / GHÉP THEO KHÓA].
 
 - Đọc cấu trúc nguồn hiện tại, xác định bảng nghiệp vụ theo nội dung/header thay vì tên tab.
 - Kiểm khóa, kỳ và phạm vi trước khi ghi.
+- Xác định từ yêu cầu người dùng đây là thay toàn bộ hay ghép theo khóa; chưa rõ thì hỏi.
 - Giữ mã hợp đồng/ACC/mã nhân sự dạng text, ngày đúng kiểu.
 - Không tự sửa nguồn nhân sự, lịch sử nhân sự, rule hoặc nguồn phụ khác.
 - Liệt kê mã mới chưa map; chỉ bổ sung map khi có nguồn xác nhận.
 - Sau cập nhật, đối soát nguồn với chi tiết nhân viên, tổng đội và dashboard; tách rõ case chờ/ngoại lệ.</pre></div><div class="prompt"><div class="prompt-head"><h4>Báo cáo tiến độ · Dữ liệu khu vực</h4><button class="copy" data-copy="upload-gt">Sao chép</button></div><pre id="upload-gt">GHÉP DỮ LIỆU CẬP NHẬT VÀO BÁO CÁO TIẾN ĐỘ
 
 Đầu vào: file cập nhật + workbook hiện tại.
-Phạm vi/khu vực: [NẾU CẦN].
 
 - Đọc dữ liệu hiện có và tự nhận diện bảng nguồn phù hợp; không dựa vào tên tab cố định.
+- Nhận diện phạm vi/khu vực từ dữ liệu hoặc yêu cầu người dùng.
 - Xác định khóa hợp đồng/case và khu vực trước khi ghép; nếu một khóa có nhiều dòng thì xác định mức chi tiết trước.
 - Chỉ cập nhật trường được cung cấp có giá trị; ô trống không tự xóa dữ liệu cũ.
 - Giữ note, lịch sử và mốc sự kiện.
@@ -456,11 +537,7 @@ Phạm vi/khu vực: [NẾU CẦN].
 - thử có data, không data, mẫu số 0, map thiếu, đổi bộ lọc và làm mới;
 - nếu lệch, truy đúng case tạo chênh lệch.
 
-Trả: kiến trúc đã chuẩn hóa, tên file đề xuất, mã cần thay, hướng dẫn cài và bảng QA. Không khẳng định đã chạy nếu chưa thực thi.</pre></div></div></details><details class="follow v19-review"><summary>Rà soát mã mẫu: điểm cần kiểm khi áp dụng <span aria-hidden="true">＋</span></summary><div class="quick-body"><p class="setup-note">Đối chiếu lớp dữ liệu báo cáo tại lần rà mẫu; chạy logic server trong môi trường mô phỏng trên dữ liệu đọc từ Sheet. Chưa cài/chạy project Apps Script thực tế. Hai nút tải giữ nguyên mã bạn gửi.</p><div class="table-scroll"><table class="guide-table"><thead><tr><th>Nội dung</th><th>Kết quả rà</th><th>Cách xử lý</th></tr></thead><tbody><tr><td>Nguồn &amp; 5 đội</td><td>B2/E2 là năm/tháng; header hàng 7. Có đủ 5 dòng TỔNG TEAM. Kế hoạch 308, Online 50 khớp tổng đội và chi tiết.</td><td>Giữ TỔNG TEAM làm nguồn tổng đội; bỏ các dòng helper legacy. So lại cùng kỳ khi data đổi.</td></tr><tr><td>HĐ chờ Online</td><td>KPI tổng là 12; cộng 5 đội là 11. Mã báo teamPendingVariance = 1.</td><td>Truy phạm vi/nhân sự chưa map và HĐ khác biệt; chưa kết luận đúng toàn bộ khi còn chênh lệch.</td></tr><tr><td>Giá trị 0</td><td>Trong phép thử đổi E5 thành 0, server vẫn trả Online = 50 vì dùng toán tử || để lấy tổng chi tiết.</td><td>Phân biệt số 0 hợp lệ với ô trống/lỗi; chỉ fallback khi thiếu giá trị có căn cứ, đồng thời báo ngoại lệ.</td></tr><tr><td>Thiếu đội</td><td>Giao diện cố định 5 đội nhưng fiveTeamFrame tạo số 0 khi thiếu nguồn.</td><td>Hiển thị “Chưa có nguồn”, tránh xếp hạng/biểu đồ như đội đã có dữ liệu 0.</td></tr><tr><td>Cài đặt</td><td>HTML tên DashboardPTTB; menu xuất ảnh cần thêm ExportDialog. Cần chuẩn hóa nhãn kiểm tra; mẫu chưa có entrypoint Web App nếu chưa bổ sung.</td><td>Đồng bộ nhãn phiên bản; chỉ dùng menu đủ phụ thuộc. Muốn link /exec thì xây Web App theo Cách B.</td></tr></tbody></table></div><p class="setup-note">Các số trên là ví dụ đối soát tại lần rà, không phải số cập nhật tự động trong file hướng dẫn.</p></div></details></article><details class="follow compact-guide"><summary>Cách B · Xây Web App riêng: nguồn → mã → triển khai → QA<span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="cols"><article class="card"><h3>Khác với đăng HTML giới thiệu</h3><p>Đăng file hướng dẫn hiện tại chỉ cần phục vụ HTML. Dashboard dữ liệu cần thêm hàm server đọc Sheet và trả dữ liệu cho giao diện.</p><p>Sheet <b>DASHBOARD</b> của PKT10 hiện là dashboard trong workbook; web app là sản phẩm mở rộng cần xây và triển khai riêng.</p></article><article class="card"><h3>Giữ một bộ rule duy nhất</h3><p>Chuẩn bị lớp dữ liệu theo kỳ để app đọc. App hiển thị/bộ lọc không được tạo cách đếm mới hoặc ghi vào ô chọn tháng dùng chung.</p><p>Với dashboard nhiều người dùng, bộ lọc thuộc phiên người xem; chọn kỳ trên app không làm đổi báo cáo của người khác.</p></article></div><div class="advanced-steps"><article><span>1</span><h3>Chọn Sheet đã QA</h3><p>Tạo bản sao. Đọc nguồn, map, rule và báo cáo; sửa phụ thuộc thiếu trên bản sao trước.</p></article><article><span>2</span><h3>Chốt lớp dữ liệu</h3><p>Dùng prompt Audit bên dưới. Chốt key, kỳ, trường, kiểu dữ liệu và công thức; cần nhiều kỳ thì tạo lớp dữ liệu nhiều kỳ.</p></article><article><span>3</span><h3>Cho AI viết app</h3><p>Dùng prompt Build. Nhận Code.gs, Index.html, cấu hình, testConnection() và testQa().</p></article><article><span>4</span><h3>Cài vào Apps Script</h3><p>Trong bản sao Sheet: Tiện ích mở rộng → Apps Script. Dán Code.gs; tạo tệp HTML tên Index rồi dán giao diện. Đặt ID Sheet theo hướng dẫn mã.</p></article><article><span>5</span><h3>Kiểm tra kết nối</h3><p>Chạy testConnection(), cấp quyền cần thiết; kiểm tra đúng file/tab/header. Chạy testQa() và xem kết quả, không chỉ thấy “thực thi xong”.</p></article><article><span>6</span><h3>Deploy &amp; kiểm thử</h3><p>Deploy → New deployment → Web app. Chọn tài khoản thực thi/phạm vi người xem phù hợp, gửi link /exec. Thử bằng tài khoản người xem và đối soát lại KPI.</p></article></div><div class="advanced-prompts"><details class="follow"><summary>1. Audit nguồn &amp; thiết kế lớp dữ liệu <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>1. Audit nguồn &amp; thiết kế lớp dữ liệu</h4><span>Điền link; dùng trước khi viết app</span></div><button class="copy" data-copy="app-audit">Sao chép</button></div><pre id="app-audit">NGUỒN / LINK SHEET: [NGUỒN / LINK SHEET]
-MỤC TIÊU DASHBOARD: [MỤC TIÊU DASHBOARD]
-BỘ LỌC / KPI CHÍNH: [BỘ LỌC / KPI CHÍNH]
-
-PHÂN TÍCH NGUỒN ĐỂ THIẾT KẾ DASHBOARD
+Trả: kiến trúc đã chuẩn hóa, tên file đề xuất, mã cần thay, hướng dẫn cài và bảng QA. Không khẳng định đã chạy nếu chưa thực thi.</pre></div></div></details><details class="follow v19-review"><summary>Rà soát mã mẫu: điểm cần kiểm khi áp dụng <span aria-hidden="true">＋</span></summary><div class="quick-body"><p class="setup-note">Đối chiếu lớp dữ liệu báo cáo tại lần rà mẫu; chạy logic server trong môi trường mô phỏng trên dữ liệu đọc từ Sheet. Chưa cài/chạy project Apps Script thực tế. Hai nút tải giữ nguyên mã bạn gửi.</p><div class="table-scroll"><table class="guide-table"><thead><tr><th>Nội dung</th><th>Kết quả rà</th><th>Cách xử lý</th></tr></thead><tbody><tr><td>Nguồn &amp; 5 đội</td><td>B2/E2 là năm/tháng; header hàng 7. Có đủ 5 dòng TỔNG TEAM. Kế hoạch 308, Online 50 khớp tổng đội và chi tiết.</td><td>Giữ TỔNG TEAM làm nguồn tổng đội; bỏ các dòng helper legacy. So lại cùng kỳ khi data đổi.</td></tr><tr><td>HĐ chờ Online</td><td>KPI tổng là 12; cộng 5 đội là 11. Mã báo teamPendingVariance = 1.</td><td>Truy phạm vi/nhân sự chưa map và HĐ khác biệt; chưa kết luận đúng toàn bộ khi còn chênh lệch.</td></tr><tr><td>Giá trị 0</td><td>Trong phép thử đổi E5 thành 0, server vẫn trả Online = 50 vì dùng toán tử || để lấy tổng chi tiết.</td><td>Phân biệt số 0 hợp lệ với ô trống/lỗi; chỉ fallback khi thiếu giá trị có căn cứ, đồng thời báo ngoại lệ.</td></tr><tr><td>Thiếu đội</td><td>Giao diện cố định 5 đội nhưng fiveTeamFrame tạo số 0 khi thiếu nguồn.</td><td>Hiển thị “Chưa có nguồn”, tránh xếp hạng/biểu đồ như đội đã có dữ liệu 0.</td></tr><tr><td>Cài đặt</td><td>HTML tên DashboardPTTB; menu xuất ảnh cần thêm ExportDialog. Cần chuẩn hóa nhãn kiểm tra; mẫu chưa có entrypoint Web App nếu chưa bổ sung.</td><td>Đồng bộ nhãn phiên bản; chỉ dùng menu đủ phụ thuộc. Muốn link /exec thì xây Web App theo Cách B.</td></tr></tbody></table></div><p class="setup-note">Các số trên là ví dụ đối soát tại lần rà, không phải số cập nhật tự động trong file hướng dẫn.</p></div></details></article><details class="follow compact-guide"><summary>Cách B · Xây Web App riêng: nguồn → mã → triển khai → QA<span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="cols"><article class="card"><h3>Khác với đăng HTML giới thiệu</h3><p>Đăng file hướng dẫn hiện tại chỉ cần phục vụ HTML. Dashboard dữ liệu cần thêm hàm server đọc Sheet và trả dữ liệu cho giao diện.</p><p>Sheet <b>DASHBOARD</b> của PKT10 hiện là dashboard trong workbook; web app là sản phẩm mở rộng cần xây và triển khai riêng.</p></article><article class="card"><h3>Giữ một bộ rule duy nhất</h3><p>Chuẩn bị lớp dữ liệu theo kỳ để app đọc. App hiển thị/bộ lọc không được tạo cách đếm mới hoặc ghi vào ô chọn tháng dùng chung.</p><p>Với dashboard nhiều người dùng, bộ lọc thuộc phiên người xem; chọn kỳ trên app không làm đổi báo cáo của người khác.</p></article></div><div class="advanced-steps"><article><span>1</span><h3>Chọn Sheet đã QA</h3><p>Tạo bản sao. Đọc nguồn, map, rule và báo cáo; sửa phụ thuộc thiếu trên bản sao trước.</p></article><article><span>2</span><h3>Chốt lớp dữ liệu</h3><p>Dùng prompt Audit bên dưới. Chốt key, kỳ, trường, kiểu dữ liệu và công thức; cần nhiều kỳ thì tạo lớp dữ liệu nhiều kỳ.</p></article><article><span>3</span><h3>Cho AI viết app</h3><p>Dùng prompt Build. Nhận Code.gs, Index.html, cấu hình, testConnection() và testQa().</p></article><article><span>4</span><h3>Cài vào Apps Script</h3><p>Trong bản sao Sheet: Tiện ích mở rộng → Apps Script. Dán Code.gs; tạo tệp HTML tên Index rồi dán giao diện. Đặt ID Sheet theo hướng dẫn mã.</p></article><article><span>5</span><h3>Kiểm tra kết nối</h3><p>Chạy testConnection(), cấp quyền cần thiết; kiểm tra đúng file/tab/header. Chạy testQa() và xem kết quả, không chỉ thấy “thực thi xong”.</p></article><article><span>6</span><h3>Deploy &amp; kiểm thử</h3><p>Deploy → New deployment → Web app. Chọn tài khoản thực thi/phạm vi người xem phù hợp, gửi link /exec. Thử bằng tài khoản người xem và đối soát lại KPI.</p></article></div><div class="advanced-prompts"><details class="follow"><summary>1. Audit nguồn &amp; thiết kế lớp dữ liệu <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>1. Audit nguồn &amp; thiết kế lớp dữ liệu</h4><span>Điền link; dùng trước khi viết app</span></div><button class="copy" data-copy="app-audit">Sao chép</button></div><pre id="app-audit">PHÂN TÍCH NGUỒN ĐỂ THIẾT KẾ DASHBOARD
 
 Đầu vào: dữ liệu/workbook được cung cấp. Chỉ đọc, chưa sửa.
 
@@ -471,11 +548,7 @@ PHÂN TÍCH NGUỒN ĐỂ THIẾT KẾ DASHBOARD
 - Đề xuất lớp dữ liệu dashboard gồm: kỳ, đơn vị/nhân sự, khóa mỗi dòng, KPI và trạng thái ngoại lệ.
 - Ghi rõ nguồn/rule của từng trường và cách nhận diện mỗi dòng.
 - Hỏi tối đa 3 điểm nghiệp vụ chưa rõ ảnh hưởng đến thiết kế.
-- Trả sơ đồ dữ liệu, schema lớp dashboard và các rủi ro cần xử lý trước khi tạo.</pre></div></div></details><details class="follow"><summary>2. Tạo dashboard Apps Script <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>2. Tạo dashboard Apps Script</h4><span>Điền link; dùng sau khi chốt lớp dữ liệu</span></div><button class="copy" data-copy="app-build">Sao chép</button></div><pre id="app-build">NGUỒN / LINK SHEET: [NGUỒN / LINK SHEET]
-MỤC TIÊU DASHBOARD: [MỤC TIÊU DASHBOARD]
-BỘ LỌC / KPI CHÍNH: [BỘ LỌC / KPI CHÍNH]
-
-THIẾT KẾ VÀ TẠO DASHBOARD APPS SCRIPT
+- Trả sơ đồ dữ liệu, schema lớp dashboard và các rủi ro cần xử lý trước khi tạo.</pre></div></div></details><details class="follow"><summary>2. Tạo dashboard Apps Script <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>2. Tạo dashboard Apps Script</h4><span>Điền link; dùng sau khi chốt lớp dữ liệu</span></div><button class="copy" data-copy="app-build">Sao chép</button></div><pre id="app-build">THIẾT KẾ VÀ TẠO DASHBOARD APPS SCRIPT
 
 Dùng kết quả phân tích dữ liệu vừa chốt. Làm trên bản sao hoặc vùng an toàn.
 
@@ -487,11 +560,7 @@ Yêu cầu:
 - Giao diện có chọn kỳ/đơn vị, KPI cards, biểu đồ, bảng chi tiết, loading, lỗi, trạng thái không có dữ liệu và nút Làm mới.
 - Bộ lọc dashboard không ghi ngược vào báo cáo nguồn.
 - Không hard-code tên tab hoặc vị trí ô nếu không có lý do nghiệp vụ.
-- Sau khi tạo, test bằng dữ liệu thực và trả mã, cấu trúc file, cách deploy cùng bảng QA.</pre></div></div></details><details class="follow"><summary>Ví dụ có link sẵn: dashboard PTTB PKT10 <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Ví dụ có link sẵn: dashboard PTTB PKT10</h4><span>Thực hành trên bản sao của sản phẩm thật</span></div><button class="copy" data-copy="app-pkt">Sao chép</button></div><pre id="app-pkt">NGUỒN / LINK SHEET: [NGUỒN / LINK SHEET]
-MỤC TIÊU DASHBOARD: [MỤC TIÊU DASHBOARD]
-BỘ LỌC / KPI CHÍNH: [BỘ LỌC / KPI CHÍNH]
-
-TẠO DASHBOARD APPS SCRIPT CHO SẢN PHẨM MẪU
+- Sau khi tạo, test bằng dữ liệu thực và trả mã, cấu trúc file, cách deploy cùng bảng QA.</pre></div></div></details><details class="follow"><summary>Ví dụ có link sẵn: dashboard PTTB PKT10 <span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Ví dụ có link sẵn: dashboard PTTB PKT10</h4><span>Thực hành trên bản sao của sản phẩm thật</span></div><button class="copy" data-copy="app-pkt">Sao chép</button></div><pre id="app-pkt">TẠO DASHBOARD APPS SCRIPT CHO SẢN PHẨM MẪU
 
 Đầu vào: workbook/bộ dữ liệu nghiệp vụ được cung cấp.
 
@@ -514,11 +583,7 @@ TẠO
 QA
 - So cùng kỳ/phạm vi giữa nguồn, lớp tính và dashboard.
 - Thử kỳ trống, mẫu số 0, map thiếu, đổi lọc nhanh và nhiều người dùng.
-- Trả mã, cấu trúc triển khai, URL nếu đã deploy và bảng QA.</pre></div></div></details><details class="follow"><summary>3. Kiểm thử &amp; sửa lỗi<span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>3. QA dashboard trước khi dùng</h4><span>Dùng sau khi có app và link triển khai</span></div><button class="copy" data-copy="app-qa">Sao chép</button></div><pre id="app-qa">NGUỒN / LINK SHEET: [NGUỒN / LINK SHEET]
-MỤC TIÊU DASHBOARD: [MỤC TIÊU DASHBOARD]
-BỘ LỌC / KPI CHÍNH: [BỘ LỌC / KPI CHÍNH]
-
-QA DASHBOARD APPS SCRIPT
+- Trả mã, cấu trúc triển khai, URL nếu đã deploy và bảng QA.</pre></div></div></details><details class="follow"><summary>3. Kiểm thử &amp; sửa lỗi<span>＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>3. QA dashboard trước khi dùng</h4><span>Dùng sau khi có app và link triển khai</span></div><button class="copy" data-copy="app-qa">Sao chép</button></div><pre id="app-qa">QA DASHBOARD APPS SCRIPT
 
 - Chọn cùng kỳ và cùng phạm vi giữa dữ liệu nguồn và dashboard.
 - So nguồn/lớp tính → KPI cards → biểu đồ → bảng chi tiết.
@@ -527,11 +592,7 @@ QA DASHBOARD APPS SCRIPT
 - Kiểm dashboard không ghi ngược vào nguồn, không dùng dữ liệu phản hồi cũ và có thông báo lỗi khi đọc nguồn thất bại.
 - Nếu lệch, truy case tạo chênh lệch.
 - Trả bảng: KPI | Nguồn | Dashboard | Chênh lệch | Kết luận.
-- Chỉ kết luận hoàn tất khi các phần cần dùng đã khớp.</pre></div><div class="prompt"><div class="prompt-head"><div><h4>4. Sửa lỗi dashboard</h4><span>Điền lỗi/kỳ; giữ rule đã chốt</span></div><button class="copy" data-copy="app-fix">Sao chép</button></div><pre id="app-fix">NGUỒN / LINK SHEET: [NGUỒN / LINK SHEET]
-MỤC TIÊU DASHBOARD: [MỤC TIÊU DASHBOARD]
-BỘ LỌC / KPI CHÍNH: [BỘ LỌC / KPI CHÍNH]
-
-SỬA LỖI DASHBOARD
+- Chỉ kết luận hoàn tất khi các phần cần dùng đã khớp.</pre></div><div class="prompt"><div class="prompt-head"><div><h4>4. Sửa lỗi dashboard</h4><span>Điền lỗi/kỳ; giữ rule đã chốt</span></div><button class="copy" data-copy="app-fix">Sao chép</button></div><pre id="app-fix">SỬA LỖI DASHBOARD
 
 Đầu vào: mô tả lỗi/ảnh chụp/kỳ/KPI bị lệch + mã và dữ liệu hiện tại.
 
