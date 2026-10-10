@@ -211,6 +211,43 @@ body.view-ready .content-group{contain:none}
 .progress{transition:transform .06s linear}
 
 .zalo-demo{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,.6fr);gap:24px;align-items:center;margin-top:18px}.zalo-demo-copy h3{margin:7px 0 8px}.zalo-demo-qr{display:grid;justify-items:center;gap:10px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:700}.zalo-demo-qr img{width:min(100%,260px);aspect-ratio:1;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 8px 26px #173f5d10}.zalo-demo-qr:hover img{border-color:#9bbbd1;box-shadow:0 10px 28px #173f5d18}@media(max-width:760px){.zalo-demo{grid-template-columns:1fr}.zalo-demo-qr{order:-1}.zalo-demo-qr img{width:min(78vw,280px)}}
+
+/* SG10 QA visual system — isolated from existing tabs */
+#qa .compact-checks{grid-template-columns:repeat(3,minmax(0,1fr))}
+.qa-extended{margin-top:24px;padding-top:24px;border-top:1px solid #dce7ee}
+.qa-extended h3{font-size:clamp(21px,2.4vw,26px)}
+.qa-extended>p{font-size:14px;color:#516b80;margin:6px 0 17px}
+.qa-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.qa-grid .follow{min-width:0;margin:0}
+.qa-grid .follow summary{min-height:62px}
+.qa-grid .prompt pre{max-height:350px}
+.qa-demo{border:1px solid #d7e3eb;overflow:hidden;background:#fff;border-radius:14px;margin-top:24px;box-shadow:0 8px 22px #19384d0a}
+.qa-demo-title{background:#12344A;padding:15px 18px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.qa-demo-title strong{color:#fff}.qa-demo-title small{color:#d8e8f3;font-size:12px}
+.qa-demo-body{padding:16px;background:#f7fafd}
+.qa-demo-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.qa-demo-stats>div{border:1px solid #e2eaf0;border-radius:10px;padding:11px 13px;background:#fff}
+.qa-demo-stats small{display:block;color:#667b88;font-size:12px}
+.qa-demo-stats b{display:block;font-size:22px;color:#173d57;line-height:1.4}
+.qa-demo-stats .qa-kpi-good{color:#007a48}.qa-demo-stats .qa-kpi-warn{color:#bd600c}
+.qa-demo-overflow{overflow:auto}
+.qa-demo-table{min-width:520px;border-collapse:separate;border-spacing:0;width:100%;background:#fff;font-size:13px;border:1px solid #d8e5ec;border-radius:9px;overflow:hidden}
+.qa-demo-table th{background:#e9f3f9;padding:10px;color:#194058;text-align:left;border-bottom:1px solid #d7e3ea}
+.qa-demo-table td{padding:10px;border-bottom:1px solid #edf2f5}
+.qa-demo-table tr:last-child td{border-bottom:0}
+.qa-demo-table tr:nth-child(2n) td{background:#f8fafc}
+.qa-demo-table td:nth-child(2),.qa-demo-table td:nth-child(3),.qa-demo-table td:nth-child(4){text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.qa-demo-table td.qa-hmap-high{background:#a9e1c2;color:#0a5835}
+.qa-demo-table td.qa-hmap-med{background:#e6f6ed;color:#0a6840}
+.qa-demo-table td.qa-hmap-low{background:#fff3d6;color:#784900}
+.qa-demo-table td.qa-hmap-high-risk{background:#fbd1c9;color:#8b261e}
+.qa-chip{display:inline-block;padding:3px 9px;border-radius:20px;font-weight:700;white-space:nowrap;font-size:12px}
+.qa-chip.pass{background:#e6f6ed;color:#0b6e42}
+.qa-chip.warn{background:#fff3d6;color:#885200}
+.qa-chip.fail{background:#fde8e7;color:#a12828}
+.qa-demo-foot{font-size:12px;color:#637b88;margin-top:12px}
+@media(max-width:720px){.qa-grid{grid-template-columns:1fr}.qa-demo-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 </style></head><body>
 <header class="top"><div class="top-in"><a class="brand" href="#overview">DATA<span>2</span>SHEET</a><nav class="view-nav" aria-label="Khu vực nội dung"><a data-view-link="intro" href="#overview">01 · Đề tài &amp; giải pháp</a><a data-view-link="products" href="#products">02 · Sản phẩm thực tế</a><a data-view-link="prompts" href="#guide">03 · Thực hành &amp; Prompt</a><a data-view-link="advanced" href="#dashboard">04 · Ứng dụng mở rộng</a></nav></div><div class="progress" aria-hidden="true"></div></header><main class="page"><div class="content-group" id="overview"><div class="group-cap"><div><span>01</span><strong>Giới thiệu đề tài</strong></div><p>Vấn đề → giải pháp → cách làm → giá trị ứng dụng</p></div><section class="hero" id="start"><div class="hero-main"><span class="label">ĐỀ TÀI DỰ THI · GIẢI PHÁP ỨNG DỤNG AI TẠI SG10</span><h1>Data<span>2</span>Sheet SG10</h1><p class="lead">Ứng dụng AI trong xây dựng<br><span class="hero-emphasis">và vận hành báo cáo nghiệp vụ.</span></p><p class="sub">Data2Sheet SG10 đề xuất cách chuyển dữ liệu thô thành báo cáo bằng hội thoại với AI, áp dụng cho Kinh doanh – Dịch vụ khách hàng – Kỹ thuật. Người dùng xác định dữ liệu, KPI và nghiệp vụ; AI hỗ trợ cấu trúc, công thức và trình bày; con người kiểm tra và quyết định sử dụng kết quả.</p><div class="hero-actions"><a class="button primary" href="#problem">Khám phá giải pháp <span aria-hidden="true">→</span></a><a class="button" href="#samples">Xem sản phẩm thực tế</a></div></div><aside class="hero-aside"><span class="label">MÔ HÌNH GIẢI PHÁP</span><ol class="path"><li><em>01</em>Có dữ liệu</li><li><em>02</em>Nói điều cần xem</li><li><em>03</em>AI hỗ trợ xây báo cáo</li><li><em>04</em>Con người kiểm tra</li><li><em>05</em>Tinh chỉnh &amp; dùng lại</li></ol><p>Người làm nghiệp vụ giữ vai trò xác định KPI, chốt rule và quyết định sử dụng kết quả.</p></aside></section>
 <section class="section" id="problem"><div class="section-title"><span class="section-num">01</span><div><h2>Vấn đề thực tế &amp; giải pháp đề xuất</h2><p>Từ nhu cầu theo dõi sản lượng, chất lượng và tiến độ tại SG10 đến công cụ báo cáo có thể kiểm tra, cập nhật và bàn giao.</p></div></div><div class="cols"><article class="card"><h3>Thực trạng &amp; nhu cầu</h3><ul><li>Phải lọc dữ liệu, ghép nhân sự, tính KPI và trình bày lại báo cáo.</li><li>Mỗi lần đổi tháng, thêm chỉ số hoặc chỉnh bộ lọc đều phải rà công thức.</li><li>Số liệu có thể lệch do trùng HĐ, sai ngày ghi nhận, nhầm đơn vị hoặc thiếu map.</li><li>Người hiểu nghiệp vụ còn phụ thuộc người thành thạo Excel/Google Sheets.</li></ul></article><article class="card highlight"><h3>Giải pháp Data2Sheet SG10</h3><ul><li>Dùng ChatGPT chuyển yêu cầu bằng ngôn ngữ tự nhiên thành cấu trúc, map và công thức.</li><li>Khai thác nguồn trên Google Sheet qua kết nối được cấp quyền; khi chưa có công cụ ghi, AI cung cấp công thức hoặc mã để người dùng triển khai.</li><li>Đối chiếu báo cáo với nguồn; truy đúng HĐ/case khi có lệch số.</li><li>Hoàn thiện qua hội thoại và dùng lại khi cập nhật dữ liệu.</li></ul></article></div><div class="callout">Người dùng nói <b>“Tôi muốn xem gì”</b>. AI hỗ trợ thực hiện phần kỹ thuật; <b>người dùng xác nhận nghiệp vụ và kiểm tra kết quả</b>.</div><div class="extension-overview"><div><span class="appendix-label">MỞ RỘNG CÙNG CÁCH LÀM</span><h3>Ba ứng dụng nâng cao</h3><p>Mô hình có thể mở rộng từ báo cáo trên Sheet sang dashboard tương tác, trợ lý phân tích SR cho DVKH và chatbot Zalo tra cứu nghiệp vụ. Ba ứng dụng bổ trợ thể hiện hướng phát triển của đề tài.</p></div><a class="button" href="#dashboard">Dashboard Apps Script →</a><a class="button" href="#cskh">AI CSKH Assistant →</a><a class="button" href="#zalo-bot">Chatbot Zalo →</a></div><div class="competition-core"><section class="section" id="roles"><div class="section-title"><span class="section-num">•</span><div><h2>AI làm phần kỹ thuật. Con người giữ nghiệp vụ.</h2><p>Giải pháp giữ hệ thống nguồn làm căn cứ và giữ quyền quyết định KPI ở người phụ trách. AI hoàn tất thao tác không đồng nghĩa số liệu đã được duyệt.</p></div></div><div class="roles"><article class="card"><span class="label">CON NGƯỜI</span><h3>Nói đúng điều cần xem</h3><p>Xác định nguồn chuẩn, KPI, cấp quản trị và mục tiêu sử dụng. Chốt kỳ tính, quy tắc hủy/trùng, phân công và ngoại lệ trước khi tính toán.</p></article><article class="card"><span class="label">AI HỖ TRỢ</span><h3>Chuyển nghiệp vụ thành báo cáo</h3><p>Rà dữ liệu, đề xuất MAP/MASTER, viết công thức, dựng báo cáo và bộ lọc; truy chênh lệch và tinh chỉnh theo phản hồi của người dùng.</p></article><article class="card"><span class="label">KIỂM SOÁT</span><h3>QA trước khi sử dụng</h3><p>Đối soát từ từng bản ghi nguồn đến nhóm và tổng báo cáo; kiểm kỳ, bộ lọc và ngoại lệ. Người phụ trách xác nhận số liệu trước khi dùng để điều hành.</p></article></div></section>
@@ -248,7 +285,27 @@ body.view-ready .content-group{contain:none}
 - Đối soát nguồn → chi tiết → nhóm → tổng.
 - Kiểm trùng, thiếu map, kỳ trống, mẫu số 0, dữ liệu mới và trường hợp ngoại lệ.
 - Nếu lệch, truy ra đúng hợp đồng/case gây chênh lệch trước khi kết luận.
-- Trả: cấu trúc đề xuất, rule đã chốt, phần đã tạo, bảng QA và điểm còn cần xác nhận.</pre></div></details></article><article class="case" id="case-hcm"><div class="case-head"><div><span class="label">02 / KIỂM SOÁT · THU HỒI · THIẾT BỊ</span><h3>Kiểm soát thiết bị thu hồi Thanh lý / CTBDV</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/14QJi_7XUHjivGmAL_tV19dPYuvhm7gDjHEa-k7AxUEk/edit" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-hcm">Sao chép prompt mẫu</button></div></div>
+- Trả: cấu trúc đề xuất, rule đã chốt, phần đã tạo, bảng QA và điểm còn cần xác nhận.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.
+
+CASE IBB: phân biệt phòng kỹ thuật/CUS, chi nhánh bán/chi nhánh quản lý, ngày online và tuổi RM; không cộng nhầm HĐ hủy, không nhân HĐ khi MAP nhiều dòng. Chỉ tô RM theo chiều xấu khi cao; kiểm riêng 0 và chưa có mẫu số.</pre></div></details></article><article class="case" id="case-hcm"><div class="case-head"><div><span class="label">02 / KIỂM SOÁT · THU HỒI · THIẾT BỊ</span><h3>Kiểm soát thiết bị thu hồi Thanh lý / CTBDV</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/14QJi_7XUHjivGmAL_tV19dPYuvhm7gDjHEa-k7AxUEk/edit" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-hcm">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Theo dõi từng HĐ khóa Thanh lý hoặc CTBDV: đã có phiếu thu hồi chưa, thiết bị đã thu/nhập kho hay còn ở KTV/KH; giảm nguy cơ thất thoát thiết bị.</p></div><div><span class="minor">KẾT QUẢ</span><p>1 HĐ + 1 lý do = 1 dòng; phân biệt Thanh lý/CTBDV; map KTV → DT → DVKH; có trạng thái hệ thống, tình trạng TB thực tế, ghi chú và cảnh báo.</p></div></div>
 <div class="flow">Data_Huy + Data_CTBDV + Data_TH → Kiểm soát TH → DATA_XAC_NHAN / LOG_SYNC</div><p class="method"><b>Cách làm với AI:</b> AI có thể đọc và thao tác trực tiếp trên Sheet khi đã được cấp quyền: tạo thêm tab, map dữ liệu, chèn/sửa công thức, dropdown và định dạng; Apps Script dùng cho luồng đồng bộ lặp lại, còn DATA_XAC_NHAN giữ trạng thái DVKH theo CASE_KEY.</p>
 <details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Từ nguồn hủy/CTBDV/thu hồi → rule → thao tác trực tiếp trên Sheet → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế báo cáo kiểm soát thu hồi thiết bị</h4><span>Cho phép tạo tab mới hoặc chỉnh trực tiếp Sheet khi đã cấp quyền</span></div><button class="copy" data-copy="build-hcm">Sao chép</button></div><pre id="build-hcm">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO KIỂM SOÁT THU HỒI THIẾT BỊ
@@ -339,7 +396,27 @@ QA
 - DATA_XAC_NHAN lưu trạng thái thực tế.
 - LOG_SYNC lưu lịch sử cập nhật.
 - Bảng QA và các case cần kiểm tra.
-- Có thể dùng lớp dữ liệu này làm nền cho Dashboard/Web theo DT → DVKH → KTV và nhóm nguy cơ thất thoát.</pre></div></details></article><article class="case" id="case-pkt"><div class="case-head"><div><span class="label">03 / KỸ THUẬT · TEAM &amp; KTV</span><h3>PKT10 – PTTB 2026 – Master Report</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1bV0TV45trGHkpNlCUvQi1Flokr7tQFvAoFvfUqaOE3k/edit?gid=1971707634" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-pkt">Sao chép prompt mẫu</button></div></div>
+- Có thể dùng lớp dữ liệu này làm nền cho Dashboard/Web theo DT → DVKH → KTV và nhóm nguy cơ thất thoát.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.
+
+CASE THU HỒI: không nhầm số thiết bị với số HĐ/case; kiểm khóa HĐ + loại case, trạng thái thu hồi và xác nhận phải độc lập. Case có nhiều thiết bị không được hoàn tất khi mới thu một phần; màu ưu tiên quá hạn và chưa xử lý.</pre></div></details></article><article class="case" id="case-pkt"><div class="case-head"><div><span class="label">03 / KỸ THUẬT · TEAM &amp; KTV</span><h3>PKT10 – PTTB 2026 – Master Report</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1bV0TV45trGHkpNlCUvQi1Flokr7tQFvAoFvfUqaOE3k/edit?gid=1971707634" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-pkt">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần theo dõi kế hoạch, thực hiện và HĐ chờ Online của từng KTV, tổng đội và toàn phòng.</p></div><div><span class="minor">KẾT QUẢ</span><p>Kế hoạch; Online; %HT; KPDV; HĐ chờ Online; tổng Đội trưởng; lũy kế và Dashboard.</p></div></div>
 <div class="flow">Dữ liệu nghiệp vụ + Nhân sự → Báo cáo kỳ → Lũy kế / Dashboard</div><p class="method"><b>Cách làm với AI:</b> AI đọc dữ liệu và quy tắc nhân sự, hỗ trợ map ACC bán về KTV, đồng bộ báo cáo tháng với lũy kế và Dashboard, rà nhân sự thiếu map.</p>
 <details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Có thể tạo tab mới hoặc chỉnh trực tiếp Sheet khi đã được cấp quyền</span></div><button class="copy" data-copy="build-pkt">Sao chép</button></div><pre id="build-pkt">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO NHÂN SỰ
@@ -368,7 +445,27 @@ QA
 - Đối soát nguồn → nhân viên → đội → tổng.
 - Kiểm nhân sự đổi đội theo thời điểm, thiếu map, trùng hợp đồng, kỳ trống và case chờ.
 - Khi số lệch phải truy ra case tạo chênh lệch.
-- Trả cấu trúc dữ liệu, rule, báo cáo đã tạo, bảng QA và danh sách điểm cần bổ sung.</pre></div></details></article><article class="case" id="case-gt"><div class="case-head"><div><span class="label">04 / DVKH &amp; KỸ THUẬT · ĐỊA BÀN</span><h3>Tổng hợp khu vực giải tỏa SG10</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1gH6WM5XAEPMzFipLi6Q59GCPosN1Gcj18XrxpHpPwbc/edit?gid=1072723482" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-gt">Sao chép prompt mẫu</button></div></div>
+- Trả cấu trúc dữ liệu, rule, báo cáo đã tạo, bảng QA và danh sách điểm cần bổ sung.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.
+
+CASE PTTB: kiểm HĐ online theo đúng ngày, nhân sự/ACC lịch sử, mapping SGx và bộ lọc phòng/đội. Đối chiếu báo cáo tháng, lũy kế, dashboard cùng rule; chưa có kế hoạch không hiển thị 0% hoàn thành.</pre></div></details></article><article class="case" id="case-gt"><div class="case-head"><div><span class="label">04 / DVKH &amp; KỸ THUẬT · ĐỊA BÀN</span><h3>Tổng hợp khu vực giải tỏa SG10</h3></div><div class="case-buttons"><a class="button sheet" href="https://docs.google.com/spreadsheets/d/1gH6WM5XAEPMzFipLi6Q59GCPosN1Gcj18XrxpHpPwbc/edit?gid=1072723482" target="_blank" rel="noopener noreferrer">Mở Sheet <span aria-hidden="true">↗</span></a><button class="copy case-copy" data-copy="build-gt">Sao chép prompt mẫu</button></div></div>
 <div class="case-info"><div><span class="minor">MỤC ĐÍCH</span><p>Cần theo dõi khách hàng bị ảnh hưởng và kết quả CDD, RM, NKN theo khu vực, Đội trưởng.</p></div><div><span class="minor">KẾT QUẢ</span><p>Số ảnh hưởng; CDD/RM/NKN theo tháng; lũy kế; %RM và %CDD; tổng theo khu vực/Đội trưởng.</p></div></div>
 <div class="flow">3 tab khu vực → Theo doi số liệu → Tổng SG10</div><p class="method"><b>Cách làm với AI:</b> AI đọc các cột sự kiện và tình trạng, hỗ trợ tổng hợp theo tháng và khu vực, tính tỷ lệ đúng mẫu số và phát hiện HĐ thiếu thông tin.</p>
 <details class="case-main-prompt"><summary><span><b>Prompt tham khảo · cách xây báo cáo</b><small>Có sẵn link tham khảo · Từ nguồn → cấu trúc → công thức → QA</small></span><span class="expand">＋</span></summary><div class="prompt"><div class="prompt-head"><div><h4>Thiết kế từ dữ liệu trên Sheet mẫu</h4><span>Có thể tạo tab mới hoặc chỉnh trực tiếp Sheet khi đã được cấp quyền</span></div><button class="copy" data-copy="build-gt">Sao chép</button></div><pre id="build-gt">PHÂN TÍCH → THIẾT KẾ → TẠO BÁO CÁO THEO DÕI TIẾN ĐỘ / GIẢI TỎA
@@ -396,7 +493,27 @@ TẠO
 QA
 - Đối soát theo khu vực, loại sự kiện, tháng và lũy kế.
 - Rà thiếu nhân sự, thiếu tháng sự kiện, trùng khóa và case chưa xác định.
-- Trả cấu trúc, rule, phần đã tạo, bảng QA và danh sách ngoại lệ.</pre></div></details></article></section>
+- Trả cấu trúc, rule, phần đã tạo, bảng QA và danh sách ngoại lệ.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.
+
+CASE GIẢI TỎA: mỗi HĐ bị ảnh hưởng phải có mẫu số đúng khu vực; không dùng trạng thái hiện tại thay cho lịch sử CDD/RM/NKN; phân biệt chuyển địa điểm thành công và rời mạng. % CDD cao tốt, % RM cao xấu.</pre></div></details></article></section>
 <section class="section" id="impact"><div class="section-title"><span class="section-num">03</span><div><h2>Đánh giá hiệu quả &amp; lộ trình nhân rộng</h2><p>Sản phẩm minh họa khả năng triển khai; hiệu quả vận hành cần được đo trên cùng bài toán và cùng kỳ dữ liệu.</p></div></div><div class="replicate-grid"><article><h3>Đổi mới trong cách làm</h3><p>Yêu cầu báo cáo được diễn đạt bằng nghiệp vụ và hoàn thiện qua hội thoại. MAP, rule và QA trở thành phần của giải pháp, giúp số liệu có căn cứ và có thể truy lại khi phát sinh chênh lệch.</p></article><article><h3>Đo hiệu quả thực tế</h3><p>So sánh thời gian tạo/cập nhật báo cáo, số thao tác thủ công, chênh lệch sau QA và khả năng người khác tự vận hành. Chỉ công bố mức tiết kiệm khi có số liệu trước–sau được xác nhận.</p></article><article><h3>Nhân rộng có kiểm soát</h3><p>Chọn một báo cáo ưu tiên ở mỗi bộ phận → chuẩn hóa nguồn và rule → thử trên bản sao → nghiệm thu một kỳ → bàn giao bộ tài liệu → theo dõi và cải tiến qua các kỳ tiếp theo.</p></article></div><div class="callout"><b>Điều kiện triển khai:</b> nguồn có thể truy cập, nghiệp vụ đủ rõ, quyền thao tác phù hợp và người chịu trách nhiệm QA. Dashboard Apps Script và AI CSKH là hai hướng mở rộng; cùng tuân thủ nguyên tắc kiểm chứng đầu vào và duyệt kết quả.</div></section></div>
 <div class="content-group" id="guide"><nav class="local-nav" aria-label="Đi nhanh trong phần prompt"><a href="#setup">Kết nối AI</a><a href="#workflow">Quy trình</a><a href="#practice">Prompt chung</a><a href="#qa">QA</a><a href="#daily-prompts">Thư viện prompt</a></nav><div class="group-cap"><div><span>03</span><strong>Prompt &amp; hướng dẫn</strong></div><p>Kết nối AI với dữ liệu → quy trình → prompt dùng ngay → QA</p></div><div class="usage-four prompt-usage"><div><b>Mục đích</b><span>Tự áp dụng AI vào dữ liệu của người xem</span></div><div><b>Đầu vào</b><span>1–2 ô: dữ liệu/link + yêu cầu</span></div><div><b>Kết quả</b><span>Prompt đã điền, có thể copy dùng ngay</span></div><div><b>Bước tiếp theo</b><span>Kiểm kết quả → bổ sung rule → QA</span></div></div><section class="section tab-intro" id="guide-start"><div class="section-title"><span class="section-num">04</span><div><h2>Phụ lục thực hành: triển khai giải pháp</h2><p>Tài liệu chuyển giao đi kèm đề tài: kết nối nguồn, quy trình thực hiện, prompt và cách đối soát để các bộ phận áp dụng vào công việc.</p></div></div><details class="follow compact-guide"><summary>Chuẩn bị kết nối &amp; quy trình làm việc<span aria-hidden="true">＋</span></summary><div class="quick-body"><section class="section" id="setup">
 <div class="section-title"><span class="section-num">•</span><div><h2>Thiết lập công cụ để làm việc trực tiếp với Google Sheet</h2><p>Data2Sheet ưu tiên làm việc ngay trên Sheet đang dùng. Chọn một trong hai cách dưới đây rồi mới chạy prompt.</p></div></div>
@@ -471,25 +588,62 @@ KẾT QUẢ CẦN TRẢ
 - Cấu trúc/rule đã chốt.
 - Phần đã tạo hoặc công thức/mã cần dùng.
 - Bảng QA.
-- Bước tiếp theo nếu còn điểm cần xác nhận.</pre></div><div class="expected"><b>Kết quả cần nhận:</b> Sheet đã được cập nhật trực tiếp (tab mới hoặc công thức/vùng đã sửa), vùng thay đổi và đối soát; hoặc công thức/mã cùng vị trí dán khi AI chưa có công cụ thực hiện. Phần thiếu nguồn hoặc quy tắc phải được nêu rõ.</div></div></div></div></section>
-<section class="section" id="qa"><div class="section-title"><span class="section-num">06</span><div><h2>Kiểm tra trước khi sử dụng</h2><p>Đối soát cùng kỳ và cùng rule. Còn lệch số hoặc thiếu map thì ghi rõ, truy case và kiểm tra lại.</p></div></div><div class="compact-checks"><p><b>Nguồn &amp; rule</b><br>Đúng tab, ngày, khóa, điều kiện trùng/hủy và map.</p><p><b>Số liệu</b><br>Chi tiết khớp tổng; tỷ lệ đúng tử/mẫu; kỳ trống rõ ràng.</p><p><b>Thao tác</b><br>Đổi kỳ/bộ lọc, thử dữ liệu mới và rà lỗi công thức.</p></div><details class="follow prompt-fold"><summary><b>Đối soát &amp; truy lỗi báo cáo</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="qa-general">Sao chép prompt</button></div><pre id="qa-general">KIỂM TRA BÁO CÁO HIỆN TẠI — CHƯA SỬA
+- Bước tiếp theo nếu còn điểm cần xác nhận.
 
-MỤC ĐÍCH
-Xác định báo cáo có đang tính đúng nguồn, đúng kỳ và đúng rule hay không.
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
 
-THỰC HIỆN
-- Đọc nguồn và xác định cùng kỳ/cùng phạm vi/cùng rule với báo cáo.
-- Đối chiếu nguồn → chi tiết → tổng nhóm → tổng toàn báo cáo.
-- Rà trùng, thiếu map, điều kiện ngày/hủy, mẫu số tỷ lệ và lỗi công thức.
-- Không phụ thuộc tên tab/vùng cố định; bám theo cấu trúc thực tế.
-- Nếu lệch, truy hợp đồng/case tạo chênh lệch trước khi đề xuất sửa.
-- Chưa đủ dữ liệu thì ghi “Cần kiểm tra”, không kết luận OK.
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.
 
-KẾT QUẢ CẦN TRẢ
-Chỉ số | Nguồn | Báo cáo | Chênh lệch | Kết luận
+OUTPUT: phạm vi nguồn đã đọc; tab/vùng/công thức đã tạo/sửa hoặc chỉ đề xuất; bảng đối soát KPI; case sai lệch theo ID; kiểm dropdown, sort, kỳ trống; bảng rule màu và kết luận nghiệm thu.</pre></div><div class="expected"><b>Kết quả cần nhận:</b> Sheet đã được cập nhật trực tiếp (tab mới hoặc công thức/vùng đã sửa), vùng thay đổi và đối soát; hoặc công thức/mã cùng vị trí dán khi AI chưa có công cụ thực hiện. Phần thiếu nguồn hoặc quy tắc phải được nêu rõ.</div></div></div></div></section>
+<section class="section" id="qa"><div class="section-title"><span class="section-num">06</span><div><h2>Kiểm tra trước khi sử dụng</h2><p>Đối soát cùng kỳ và cùng rule. Còn lệch số hoặc thiếu map thì ghi rõ, truy case và kiểm tra lại.</p></div></div><div class="compact-checks"><p><b>Nguồn &amp; rule</b><br>Đúng tab, ngày, khóa, điều kiện trùng/hủy và map.</p><p><b>Số liệu</b><br>Chi tiết khớp tổng; tỷ lệ đúng tử/mẫu; kỳ trống rõ ràng.</p><p><b>Thao tác</b><br>Đổi kỳ/bộ lọc, thử dữ liệu mới và rà lỗi công thức.</p></div><details class="follow prompt-fold"><summary><b>Đối soát &amp; truy lỗi báo cáo</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="qa-general">Sao chép prompt</button></div><pre id="qa-general">KIỂM TOÁN GOOGLE SHEET TOÀN DIỆN — CHẾ ĐỘ CHỈ ĐỌC
 
-BƯỚC TIẾP THEO
-Chỉ đề xuất sửa sau khi đã xác định được nguyên nhân hoặc phần còn thiếu.</pre></div></div></details><div class="qa-outcomes"><div><span class="status pass">Đạt</span><p>Khớp nguồn, đúng rule, dùng được.</p></div><div><span class="status pending">Cần kiểm tra</span><p>Thiếu dữ liệu/rule; nêu phần còn thiếu.</p></div><div><span class="status fail">Cần sửa</span><p>Lệch số/chức năng; sửa và kiểm lại.</p></div></div></section></div><div class="content-group" id="prompts"><section class="section" id="daily-prompts"><div class="section-title"><span class="section-num">07</span><div><h2>Phụ lục: prompt theo tình huống nghiệp vụ</h2><p>Chọn đúng việc cần làm, điền thông tin đầu vào rồi sao chép. Prompt được thiết kế để dùng lại trên nhiều nguồn, không phụ thuộc một link hoặc tên tab cố định.</p></div></div><div class="library-index"><a href="#lib-data"><b>01 · Dữ liệu</b><span>Cập nhật, gộp, map</span></a><a href="#lib-comment"><b>02 · Nhận xét</b><span>Công thức hoặc AI</span></a><a href="#lib-upgrade"><b>03 · Nâng cấp</b><span>KPI, kỳ, chi tiết</span></a><a href="#lib-fix"><b>04 · Kiểm lỗi</b><span>Truy lệch và sửa</span></a></div><p class="setup-note">Thay [ngoặc] trước khi gửi. “Link trên” dùng trong cùng cuộc chat đã cung cấp nguồn. Nếu AI chưa truy cập được Sheet, đính kèm file xuất và yêu cầu trả công thức/mã cùng vị trí dán.</p><article class="library-group" id="lib-data"><h3>01 · Cập nhật &amp; chuẩn hóa dữ liệu</h3><p class="purpose-note">Dùng khi có file mới, cần gộp dữ liệu hoặc cập nhật nguồn đang chạy.</p><p>Một prompt cho ba chế độ; chọn rõ phạm vi và khóa ghép.</p><details class="follow prompt-fold"><summary><b>Cập nhật, gộp file &amp; map dữ liệu</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-data">Sao chép prompt</button></div><pre id="task-data">CẬP NHẬT / GỘP / CHUẨN HÓA DỮ LIỆU
+MỤC TIÊU: kiểm tra báo cáo đã tính đúng và có sẵn sàng sử dụng chưa. Không tự thay công thức, raw data hay rule nghiệp vụ.
+
+1. LẬP SƠ ĐỒ NGUỒN
+Liệt kê các tab nguồn/báo cáo/MAP, kỳ và trường ngày. Xác định grain mỗi dòng là HĐ, case, thiết bị hay sự kiện; khóa duy nhất; điều kiện hủy/trùng; phân cấp nhân sự → đội → đơn vị. Nếu không đọc được nguồn nào, đánh dấu CHƯA XÁC MINH.
+
+2. QA DỮ LIỆU
+Tìm ID trống/trùng, MAP thiếu/mâu thuẫn, ngày lưu text, ngoài kỳ, trạng thái hủy, JOIN nhân dòng, chi tiết lệch tổng. Với từng lỗi phải có nguồn và ID/dòng dẫn chứng; tránh xóa trùng khi một HĐ có nhiều sự kiện hợp lệ.
+
+3. QA CÔNG THỨC & KẾT QUẢ
+Rà #REF!, #N/A, #VALUE!, #DIV/0!, lỗi tham chiếu vòng, công thức mất/ghi đè, ARRAYFORMULA/QUERY/FILTER bị chặn spill, range không tự mở rộng, sai COUNT vs COUNTUNIQUE, AND/OR, đầu-cuối kỳ và mẫu số 0.
+Tính lại độc lập mỗi KPI từ nguồn theo cùng kỳ và rule: nguồn → case → KTV/ACC → Đội/SGx → Tổng. Mỗi tỷ lệ ghi rõ tử số và mẫu số. Kiểm khi đổi filter/dropdown/sort, chọn Tất cả, kỳ trống và thêm dòng mới.
+
+4. QA HIỂN THỊ & MÀU
+Rà header, bố cục, freeze, số định dạng %, ngày, màu trạng thái và chiều KPI, ô trống khác 0, cột bị tràn/ẩn, dropdown, sort, hiệu năng và mobile.
+Màu quy ước: hoàn tất xanh #E6F6ED; theo dõi vàng #FFF3D6; lỗi/quá hạn đỏ #FDE8E7; thông tin xanh lam #E9F3FC; thiếu căn cứ xám #F0F3F6.
+KPI cao tốt dùng heatmap xanh; KPI cao xấu dùng vàng→đỏ; chưa chốt ngưỡng thì chưa áp ngưỡng.
+
+5. BÁO CÁO QA BẮT BUỘC
+Bảng 1: KPI | Kỳ | Số từ nguồn độc lập | Số trên báo cáo | Chênh lệch | Kết luận.
+Bảng 2: Mức độ | Sheet!Ô/Vùng | ID/case | Công thức/rule | Nguyên nhân | Đề xuất | Kết quả test.
+Bảng 3: Vùng màu | KPI/trạng thái | Điều kiện | Màu nền/chữ | Ưu tiên | Nguy cơ xung đột.
+Kết luận cuối: ĐẠT (đã có chứng cứ) / CẦN KIỂM TRA (thiếu căn cứ) / CẦN SỬA (lỗi đã xác minh). Không tuyên bố đã sửa khi mới đưa đề xuất.</pre></div></div></details><div class="qa-outcomes"><div><span class="status pass">Đạt</span><p>Khớp nguồn, đúng rule, dùng được.</p></div><div><span class="status pending">Cần kiểm tra</span><p>Thiếu dữ liệu/rule; nêu phần còn thiếu.</p></div><div><span class="status fail">Cần sửa</span><p>Lệch số/chức năng; sửa và kiểm lại.</p></div></div><div class="qa-extended" id="qa-deep"><h3>Bộ prompt QA chuyên sâu</h3><p>Đã tách riêng kiểm dữ liệu, công thức, giao diện và rule màu để dùng đúng tác vụ, tránh yêu cầu AI sửa lan sang phần đang chạy đúng.</p><div class="qa-grid"><details class="follow prompt-fold"><summary><b>01 · QA dữ liệu & MAP</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>01 · QA dữ liệu & MAP</h4><span>Kiểm trùng, thiếu khóa, sai kỳ</span></div><button class="copy" data-copy="qa-source">Sao chép prompt</button></div><pre id="qa-source">QA NGUỒN DỮ LIỆU — CHỈ ĐỌC
+Đọc nguồn, chốt grain/khóa, kỳ, trạng thái và MAP. Rà trùng thực sự, HĐ nhiều sự kiện hợp lệ, ID rỗng, mã nhân viên không map, JOIN nhân dòng, ngày text, dữ liệu ngoài kỳ/hủy.
+Đối soát số bản ghi: nguồn thô → hợp lệ → nhóm nhân sự → tổng. Trả chính xác Sheet!Dòng, HĐ/ID, giá trị gốc, quy tắc, KPI ảnh hưởng, mức độ và cách xử lý. Không tự sửa và không khẳng định ĐẠT khi không có chứng cứ.</pre></div></div></details><details class="follow prompt-fold"><summary><b>02 · QA công thức & đối soát</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>02 · QA công thức & đối soát</h4><span>Truy ô lỗi, kiểm độ chính xác</span></div><button class="copy" data-copy="qa-formula">Sao chép prompt</button></div><pre id="qa-formula">QA CÔNG THỨC — CHỈ ĐỌC
+Liệt kê KPI và công thức gốc đang dùng cùng vùng tham chiếu. Quét #REF!, #N/A, #DIV/0!, #VALUE!, #ERROR!, tham chiếu vòng, spill bị chặn, QUERY/FILTER/IMPORTRANGE, ARRAYFORMULA, tràn/thiếu vùng, sai COUNTUNIQUE, ngày biên và mẫu số 0.
+Tính độc lập cùng rule và đối soát nguồn→KTV→Đội→SGx→Tổng. Thử kỳ trống, dữ liệu mới, thay dropdown, sort và mã trùng.
+Trả Mức độ | Sheet!Ô | Công thức hiện tại | Giá trị hiện tại | Giá trị đúng | ID gây lỗi | Nguyên nhân | Công thức sửa | Test lại. Nếu chưa có quyền ghi, chỉ đề xuất, không thay đổi.</pre></div></div></details><details class="follow prompt-fold"><summary><b>03 · QA bố cục & trải nghiệm</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>03 · QA bố cục & trải nghiệm</h4><span>Dropdown, độ đọc, thẩm mỹ</span></div><button class="copy" data-copy="qa-design">Sao chép prompt</button></div><pre id="qa-design">QA HIỂN THỊ BÁO CÁO — CHỈ ĐỌC
+Đánh giá cấu trúc tiêu đề/kỳ/KPI/bộ lọc/bảng/ngoại lệ. Kiểm font Việt, độ rộng cột, định dạng ngày/số/%, tràn chữ, ô gộp, freeze, dropdown, sort, ô trống/0, tương phản, quy ước màu và màn hình nhỏ.
+Đề xuất theo vùng chính xác, không thay rule tính toán. Trả Sheet!Vùng | Hiện trạng | Vấn đề | Thiết kế mới | Lợi ích | Rủi ro | Mức ưu tiên. Ưu tiên ít thao tác, dễ nhìn khi dùng thật.</pre></div></div></details><details class="follow prompt-fold"><summary><b>04 · Thiết kế rule màu chuẩn</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>04 · Thiết kế rule màu chuẩn</h4><span>Heatmap theo hướng KPI tốt/xấu</span></div><button class="copy" data-copy="qa-color">Sao chép prompt</button></div><pre id="qa-color">THIẾT KẾ RULE MÀU TỰ ĐỘNG
+Đọc từng KPI và xác định hướng tốt/xấu; ngưỡng lấy từ rule có thật, không tự sáng tác. Mẫu FPT: navy #12344A header, cam #F37021 nổi bật, xanh dương #0072BC dẫn hướng, xanh lá #00A859 thành công.
+Nền pastel: đạt #E6F6ED, theo dõi #FFF3D6, lỗi/trễ #FDE8E7, thông tin #E9F3FC, thiếu dữ liệu #F0F3F6.
+Heatmap KPI cao tốt xanh nhạt→đậm; KPI cao xấu vàng/cam→đỏ. Rule ưu tiên: lỗi công thức > trễ hạn > trạng thái > heatmap > zebra. Trống khác 0; có chữ giải thích, không dùng màu đơn độc.
+Trả bảng Cột/vùng | Rule/kỳ | Điều kiện | Công thức custom | Nền/chữ | Ưu tiên. Áp bằng conditional formatting với vùng tự mở rộng; đối chiếu các Google Sheet mẫu nếu có quyền. Test đúng ngưỡng, ngoài ngưỡng, thiếu dữ liệu, đổi kỳ và thêm dòng.</pre></div></div></details></div><div class="qa-demo"><div class="qa-demo-title"><strong>Minh họa rule màu báo cáo SG10</strong><small>Dữ liệu ví dụ, không phải số liệu vận hành</small></div><div class="qa-demo-body"><div class="qa-demo-stats"><div><small>HĐ hợp lệ</small><b>120</b></div><div><small>Tỷ lệ hoàn tất</small><b class="qa-kpi-good">96%</b></div><div><small>Case theo dõi</small><b class="qa-kpi-warn">08</b></div><div><small>Tình trạng QA</small><b style="color:#0072BC;font-size:16px">Chờ đối soát</b></div></div><div class="qa-demo-overflow"><table class="qa-demo-table"><thead><tr><th>Đơn vị</th><th>HĐ</th><th>Hoàn tất ↑</th><th>Trễ hạn ↓</th><th>Trạng thái</th></tr></thead><tbody><tr><td>Đội mẫu A</td><td>46</td><td class="qa-hmap-high">96%</td><td class="qa-hmap-low">3%</td><td><span class="qa-chip pass">Đạt</span></td></tr><tr><td>Đội mẫu B</td><td>40</td><td class="qa-hmap-med">84%</td><td class="qa-hmap-high-risk">11%</td><td><span class="qa-chip warn">Theo dõi</span></td></tr><tr><td>Đội mẫu C</td><td>34</td><td class="qa-hmap-med">79%</td><td class="qa-hmap-high-risk">17%</td><td><span class="qa-chip fail">Cần xử lý</span></td></tr></tbody></table></div><p class="qa-demo-foot">Lưu ý: các giá trị và nhãn ví dụ chỉ minh họa. Khi áp dụng, lấy ngưỡng đánh giá từ nghiệp vụ từng báo cáo; không mặc định một tỷ lệ bất kỳ là đạt hoặc trễ.</p></div></div></div></section></div><div class="content-group" id="prompts"><section class="section" id="daily-prompts"><div class="section-title"><span class="section-num">07</span><div><h2>Phụ lục: prompt theo tình huống nghiệp vụ</h2><p>Chọn đúng việc cần làm, điền thông tin đầu vào rồi sao chép. Prompt được thiết kế để dùng lại trên nhiều nguồn, không phụ thuộc một link hoặc tên tab cố định.</p></div></div><div class="library-index"><a href="#lib-data"><b>01 · Dữ liệu</b><span>Cập nhật, gộp, map</span></a><a href="#lib-comment"><b>02 · Nhận xét</b><span>Công thức hoặc AI</span></a><a href="#lib-upgrade"><b>03 · Nâng cấp</b><span>KPI, kỳ, chi tiết</span></a><a href="#lib-fix"><b>04 · Kiểm lỗi</b><span>Truy lệch và sửa</span></a></div><p class="setup-note">Thay [ngoặc] trước khi gửi. “Link trên” dùng trong cùng cuộc chat đã cung cấp nguồn. Nếu AI chưa truy cập được Sheet, đính kèm file xuất và yêu cầu trả công thức/mã cùng vị trí dán.</p><article class="library-group" id="lib-data"><h3>01 · Cập nhật &amp; chuẩn hóa dữ liệu</h3><p class="purpose-note">Dùng khi có file mới, cần gộp dữ liệu hoặc cập nhật nguồn đang chạy.</p><p>Một prompt cho ba chế độ; chọn rõ phạm vi và khóa ghép.</p><details class="follow prompt-fold"><summary><b>Cập nhật, gộp file &amp; map dữ liệu</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-data">Sao chép prompt</button></div><pre id="task-data">CẬP NHẬT / GỘP / CHUẨN HÓA DỮ LIỆU
 
 MỤC ĐÍCH
 Cập nhật dữ liệu mới vào báo cáo hoặc hợp nhất nhiều nguồn mà không làm sai dữ liệu cũ.
@@ -512,7 +666,13 @@ KẾT QUẢ CẦN TRẢ
 - Đối soát nguồn → báo cáo sau cập nhật.
 
 BƯỚC TIẾP THEO
-- Chỉ sau khi QA khớp mới tiếp tục dùng báo cáo hoặc cập nhật kỳ tiếp theo.</pre></div></div></details></article><article class="library-group" id="lib-comment"><h3>02 · Tạo nhận xét báo cáo</h3><p class="purpose-note">Dùng khi số liệu đã QA và cần biến KPI thành nhận xét tự động hoặc nhận xét bằng AI.</p><p>Công thức tự đổi theo Sheet; nhận xét AI cần chạy lại khi nguồn đổi.</p><details class="follow prompt-fold"><summary><b>Nhận xét tự cập nhật bằng công thức</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-formula">Sao chép prompt</button></div><pre id="task-comment-formula">TẠO NHẬN XÉT ĐỘNG BẰNG CÔNG THỨC
+- Chỉ sau khi QA khớp mới tiếp tục dùng báo cáo hoặc cập nhật kỳ tiếp theo.
+
+HẬU KIỂM SAU KHI CẬP NHẬT
+- Trả số dòng nguồn/đã nạp/thêm/sửa/bỏ qua/xung đột, kỳ và khóa áp dụng.
+- So số HĐ/case hợp lệ theo kỳ trước/sau, tìm trùng ID/thiếu map/ngày sai định dạng, kiểm công thức kéo dài và vùng tràn.
+- Nếu tổng thay đổi ngoài phạm vi hoặc thiếu quyền nguồn thì chưa nghiệm thu; truy ID cụ thể.
+- Xuất bảng: Kỳ | Nguồn | Hợp lệ | Đã nạp | Thiếu MAP | Chênh lệch | Kết luận.</pre></div></div></details></article><article class="library-group" id="lib-comment"><h3>02 · Tạo nhận xét báo cáo</h3><p class="purpose-note">Dùng khi số liệu đã QA và cần biến KPI thành nhận xét tự động hoặc nhận xét bằng AI.</p><p>Công thức tự đổi theo Sheet; nhận xét AI cần chạy lại khi nguồn đổi.</p><details class="follow prompt-fold"><summary><b>Nhận xét tự cập nhật bằng công thức</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-comment-formula">Sao chép prompt</button></div><pre id="task-comment-formula">TẠO NHẬN XÉT ĐỘNG BẰNG CÔNG THỨC
 
 MỤC ĐÍCH
 Tạo phần nhận xét tự đổi theo dữ liệu/kỳ của báo cáo.
@@ -570,7 +730,25 @@ KẾT QUẢ CẦN TRẢ
 - Bảng QA trước/sau.
 
 BƯỚC TIẾP THEO
-- Kiểm một kỳ có dữ liệu, một kỳ trống và các case biên trước khi áp dụng rộng.</pre></div></div></details></article><article class="library-group" id="lib-fix"><h3>04 · Kiểm tra &amp; sửa lỗi</h3><p class="purpose-note">Dùng khi số liệu lệch, công thức lỗi hoặc bộ lọc cho kết quả bất thường.</p><p>Tìm đúng case lệch, sửa và đối soát lại.</p><details class="follow prompt-fold"><summary><b>Truy nguyên nhân &amp; sửa lỗi</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-fix">Sao chép prompt</button></div><pre id="task-fix">KIỂM TRA VÀ SỬA LỖI BÁO CÁO
+- Kiểm một kỳ có dữ liệu, một kỳ trống và các case biên trước khi áp dụng rộng.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+CHUẨN THẨM MỸ & RULE MÀU BÁO CÁO
+- Bố cục quét nhanh: tiêu đề + kỳ và thời điểm cập nhật → KPI chính → bộ lọc → chi tiết theo nhân sự/đơn vị → case ngoại lệ → trạng thái QA.
+- Palette FPT: navy #12344A cho header; cam #F37021 để nhấn; xanh #0072BC cho nhãn điều hướng; xanh lá #00A859 cho thành công. Ưu tiên nền sáng và tương phản chữ rõ.
+- Màu nền trạng thái: xanh nhạt #E6F6ED (đạt); vàng nhạt #FFF3D6 (theo dõi); đỏ nhạt #FDE8E7 (trễ/lỗi); xanh lam nhạt #E9F3FC (thông tin); xám #F0F3F6 (thiếu/chưa xác minh).
+- Heatmap: KPI càng cao càng tốt (sản lượng, % hoàn tất) → xanh nhạt tới đậm; KPI càng cao càng xấu (tỷ lệ RM/CLL/tồn/trễ) → vàng/cam/đỏ. Chỉ so sánh cùng đơn vị và cùng định nghĩa; ô trống không được đồng nghĩa số 0.
+- Dùng định dạng có điều kiện động, ưu tiên lỗi/khẩn cấp trên heatmap; luôn có chữ/số mô tả không chỉ biểu thị bằng màu. Ngưỡng màu lấy từ nghiệp vụ đã xác minh, tuyệt đối không tự giả định.
+- Font Việt dễ đọc, canh số/%, format ngày nhất quán; tiêu đề rõ, freeze header và cột định danh nếu cần, zebra nhẹ, đường kẻ mảnh; tránh gộp ô trong vùng sort/filter; test cả desktop/mobile.
+- Khi sửa báo cáo đang đúng, ưu tiên thay đổi format/rule màu mà không đụng công thức và raw data; nêu rõ phạm vi và chụp đối chiếu trước/sau khi có công cụ.</pre></div></div></details></article><article class="library-group" id="lib-fix"><h3>04 · Kiểm tra &amp; sửa lỗi</h3><p class="purpose-note">Dùng khi số liệu lệch, công thức lỗi hoặc bộ lọc cho kết quả bất thường.</p><p>Tìm đúng case lệch, sửa và đối soát lại.</p><details class="follow prompt-fold"><summary><b>Truy nguyên nhân &amp; sửa lỗi</b><span aria-hidden="true">＋</span></summary><div class="quick-body"><div class="prompt"><div class="prompt-head"><div><h4>Prompt dùng ngay</h4><span>Sao chép và dùng trong ChatGPT</span></div><button class="copy" data-copy="task-fix">Sao chép prompt</button></div><pre id="task-fix">KIỂM TRA VÀ SỬA LỖI BÁO CÁO
 
 MỤC ĐÍCH
 Tìm đúng nguyên nhân khi số liệu lệch, công thức lỗi hoặc bộ lọc hoạt động sai.
@@ -590,7 +768,18 @@ KẾT QUẢ CẦN TRẢ
 - Các điểm còn “Cần kiểm tra” nếu chưa đủ căn cứ.
 
 BƯỚC TIẾP THEO
-- Chạy lại QA cùng kỳ và thêm một kỳ khác để xác nhận lỗi đã được xử lý.</pre></div></div></details></article><details class="follow"><summary>Tham khảo: cập nhật file vào 4 Sheet thực tế<span aria-hidden="true">＋</span></summary><div class="quick-body source-examples"><div class="prompt"><div class="prompt-head"><h4>Báo cáo kinh doanh · Dữ liệu nghiệp vụ</h4><button class="copy" data-copy="upload-ibb">Sao chép</button></div><pre id="upload-ibb">CẬP NHẬT DỮ LIỆU CHO BÁO CÁO HIỆN TẠI
+- Chạy lại QA cùng kỳ và thêm một kỳ khác để xác nhận lỗi đã được xử lý.
+
+BỘ KIỂM THỬ NGHIỆM THU BẮT BUỘC
+- Xác định từng dòng đại diện cho HĐ, case, thiết bị hay sự kiện; khóa duy nhất và xử lý lịch sử trước khi loại trùng. Giữ mã HĐ/ACC/nhân viên dạng text.
+- Với từng KPI, chỉ rõ cột ngày, kỳ, phạm vi, điều kiện hủy/trùng, nhóm phân bổ, tử số/mẫu số và chiều tốt/xấu.
+- Đối chiếu độc lập từ dữ liệu nguồn → case hợp lệ → KTV/ACC → Đội/SGx → tổng; mọi tầng phải cùng rule/kỳ.
+- Quét #REF!, #N/A, #VALUE!, #DIV/0!, #ERROR!, tham chiếu vòng, ARRAYFORMULA/QUERY/FILTER bị chắn vùng tràn, công thức ghi đè, phạm vi chưa mở rộng và JOIN nhân dòng.
+- Kiểm kỳ có dữ liệu, kỳ trống, ngày đầu/cuối tháng, mã trùng, thiếu MAP, nhân sự đổi nhóm, mẫu số 0, dữ liệu bổ sung, dropdown và sort.
+- Mỗi bất thường ghi Mức độ | Sheet!Ô/Vùng | Kỳ/ID | Hiện trạng | Kỳ vọng | Chênh lệch | Nguyên nhân | Phương án | Kết quả retest.
+- Chỉ kết luận ĐẠT khi có chứng cứ khớp; nếu thiếu nguồn/rule ghi CẦN KIỂM TRA, nếu sai dữ liệu/công thức ghi CẦN SỬA. Chưa truy cập/chưa thao tác thì không khẳng định đã sửa.
+
+Sửa tối thiểu từng vùng sau khi ghi nhận công thức gốc; kiểm lại kỳ hiện tại và kỳ cũ; tuyệt đối không làm mất dropdown, định dạng, số liệu kỳ khác.</pre></div></div></details></article><details class="follow"><summary>Tham khảo: cập nhật file vào 4 Sheet thực tế<span aria-hidden="true">＋</span></summary><div class="quick-body source-examples"><div class="prompt"><div class="prompt-head"><h4>Báo cáo kinh doanh · Dữ liệu nghiệp vụ</h4><button class="copy" data-copy="upload-ibb">Sao chép</button></div><pre id="upload-ibb">CẬP NHẬT DỮ LIỆU CHO BÁO CÁO HIỆN TẠI
 
 Đầu vào: file dữ liệu mới + workbook/báo cáo đang làm trong cuộc chat.
 
